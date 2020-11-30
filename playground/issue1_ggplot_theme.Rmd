@@ -1,0 +1,20 @@
+---
+title: "issue1 - ggplot theme"
+author: "Frie"
+date: "11/30/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(ggplot2)
+ca_counts <- readr::read_csv("https://raw.githubusercontent.com/friep/correlaid-utils/main/correlaid-analytics/data/all_daily.csv")
+
+ggplot(ca_counts, aes(x = date, y = n, color = platform))+
+  geom_line()+
+  labs(title = "a title", subtitle = "a subtitle")
+```
+

@@ -23,10 +23,8 @@ work with R Markdown
 1.  Download the repository as a zip (by clicking on the green “code”
     button and “download as zip”). Unzip the directory and double-click
     on the file `correltools.Rproj` to open the project in RStudio.
-2.  create a R Markdown for your work in the `playground` folder (please
-    choose sensible names as `issue1_ggplot_theme.Rmd`)
-3.  Starting with the get started code in the issue, work until you have
-    something that you think is cool.
+2.  work in the RMarkdown for your issue in the `playground` folder
+3.  work until you have something that you think is cool.
 4.  If you know how to write a R function, try to put your code into a
     function. If you don’t know about functions yet, you can read more
     about them [here](https://r4ds.had.co.nz/functions.html).
@@ -41,8 +39,7 @@ branching
 2.  make a branch for your issue (e.g. issue1-ggplot-theme). If you
     don’t know about branching, you can also work on the `main`
     branch. Ask Frie to add you as a contributor to the GitHub repo.
-3.  create a R Markdown for your work in the `playground` folder (please
-    choose sensible names as `issue1_ggplot_theme.Rmd`)
+3.  work in the RMarkdown for your issue in the `playground` folder
 4.  work until you have something that you think is cool. Commit
     whenever you feel you have made some progress.
 5.  write a function that generates the output in your r markdown. (or
@@ -62,9 +59,8 @@ and/or how to work on Git branches (or you want to learn about it\!).
     make a pull request). If you choose the former, ask Frie to add you
     as a contributor to the GitHub repo.
 2.  make a branch for your issue (e.g. issue1-ggplot-theme).
-3.  create a R Markdown for your work in the `playground` folder (please
-    choose sensible names as `issue1_ggplot_theme.Rmd`) or directly work
-    in `R` on your function. :)
+3.  work in the RMarkdown for your issue in the `playground` folder or
+    directly work in `R` on your function. :)
 4.  work until you have something that you think is cool. Commit
     whenever you feel you have made some progress.
 5.  Make a PR if you’re ready :)

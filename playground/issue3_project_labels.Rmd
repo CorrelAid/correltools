@@ -1,0 +1,14 @@
+---
+title: "issue3 - project labels"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Load data
+```{r}
+labels_df <- readr::read_csv("https://raw.githubusercontent.com/CorrelAid/correltools/main/data/example_projects_labels.csv")
+```
+

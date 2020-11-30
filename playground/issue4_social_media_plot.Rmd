@@ -1,0 +1,14 @@
+---
+title: "issue4 - social media plot"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## load data
+```{r}
+ca_counts <- readr::read_csv("https://raw.githubusercontent.com/friep/correlaid-utils/main/correlaid-analytics/data/all_daily.csv")
+```
+
