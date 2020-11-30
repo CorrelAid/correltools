@@ -16,3 +16,4 @@ example_projects_labels <- tidyr::unnest(projects_df, labels) %>%
   tidyr::separate(name, c("category", "value"), extra = "merge", fill = "right")
 
 usethis::use_data(example_projects_labels, overwrite = TRUE)
+readr::write_csv(example_projects_labels, "data/example_projects_labels.csv")

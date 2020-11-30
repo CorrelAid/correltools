@@ -1,0 +1,238 @@
+number,state,id,node_id,url,category,value,color,default,description
+78,open,1849083665,MDU6TGFiZWwxODQ5MDgzNjY1,https://api.github.com/repos/CorrelAid/projects/labels/data:process,data,process,f2e085,FALSE,process data from the organization's work
+78,open,2527309653,MDU6TGFiZWwyNTI3MzA5NjUz,https://api.github.com/repos/CorrelAid/projects/labels/internal,internal,NA,4c8fc9,FALSE,internal project
+78,open,1775355645,MDU6TGFiZWwxNzc1MzU1NjQ1,https://api.github.com/repos/CorrelAid/projects/labels/language:python,language,python,0e8a16,FALSE,python project
+78,open,1905099555,MDU6TGFiZWwxOTA1MDk5NTU1,https://api.github.com/repos/CorrelAid/projects/labels/type:webdev,type,webdev,fc67b6,FALSE,Web development project
+77,open,2512019564,MDU6TGFiZWwyNTEyMDE5NTY0,https://api.github.com/repos/CorrelAid/projects/labels/correlaidx,correlaidx,NA,d93f0b,FALSE,local chapter project
+77,open,1775395156,MDU6TGFiZWwxNzc1Mzk1MTU2,https://api.github.com/repos/CorrelAid/projects/labels/data:survey,data,survey,f2e085,FALSE,survey data the organization / we collected
+77,open,2527309653,MDU6TGFiZWwyNTI3MzA5NjUz,https://api.github.com/repos/CorrelAid/projects/labels/internal,internal,NA,4c8fc9,FALSE,internal project
+77,open,1775355645,MDU6TGFiZWwxNzc1MzU1NjQ1,https://api.github.com/repos/CorrelAid/projects/labels/language:python,language,python,0e8a16,FALSE,python project
+77,open,1775356701,MDU6TGFiZWwxNzc1MzU2NzAx,https://api.github.com/repos/CorrelAid/projects/labels/lc:berlin,lc,berlin,ea3d09,FALSE,project of local chapter berlin
+77,open,1872054892,MDU6TGFiZWwxODcyMDU0ODky,https://api.github.com/repos/CorrelAid/projects/labels/sector:social,sector,social,bfdadc,FALSE,"organization works to support social causes (e.g. refugees, homeless, elderly people, ...)"
+77,open,1875654711,MDU6TGFiZWwxODc1NjU0NzEx,https://api.github.com/repos/CorrelAid/projects/labels/stack:jupyternotebooks,stack,jupyternotebooks,1656f9,FALSE,
+77,open,1775397004,MDU6TGFiZWwxNzc1Mzk3MDA0,https://api.github.com/repos/CorrelAid/projects/labels/type:exploratory,type,exploratory,fc67b6,FALSE,exploratory data analysis
+77,open,1829100329,MDU6TGFiZWwxODI5MTAwMzI5,https://api.github.com/repos/CorrelAid/projects/labels/year:2020,year,2020,d4c5f9,FALSE,year 2020
+76,open,2512019564,MDU6TGFiZWwyNTEyMDE5NTY0,https://api.github.com/repos/CorrelAid/projects/labels/correlaidx,correlaidx,NA,d93f0b,FALSE,local chapter project
+76,open,1849083665,MDU6TGFiZWwxODQ5MDgzNjY1,https://api.github.com/repos/CorrelAid/projects/labels/data:process,data,process,f2e085,FALSE,process data from the organization's work
+76,open,2516001838,MDU6TGFiZWwyNTE2MDAxODM4,https://api.github.com/repos/CorrelAid/projects/labels/lc:hh,lc,hh,d93f0b,FALSE,Local chapter Hamburg
+76,open,1872054892,MDU6TGFiZWwxODcyMDU0ODky,https://api.github.com/repos/CorrelAid/projects/labels/sector:social,sector,social,bfdadc,FALSE,"organization works to support social causes (e.g. refugees, homeless, elderly people, ...)"
+76,open,1842954254,MDU6TGFiZWwxODQyOTU0MjU0,https://api.github.com/repos/CorrelAid/projects/labels/type:visualization,type,visualization,fc67b6,FALSE,"data visualization project (e.g. shiny, dashboards)"
+76,open,1829100329,MDU6TGFiZWwxODI5MTAwMzI5,https://api.github.com/repos/CorrelAid/projects/labels/year:2020,year,2020,d4c5f9,FALSE,year 2020
+75,open,1775395156,MDU6TGFiZWwxNzc1Mzk1MTU2,https://api.github.com/repos/CorrelAid/projects/labels/data:survey,data,survey,f2e085,FALSE,survey data the organization / we collected
+75,open,1775355236,MDU6TGFiZWwxNzc1MzU1MjM2,https://api.github.com/repos/CorrelAid/projects/labels/language:r,language,r,0e8a16,FALSE,r project
+75,open,1775398882,MDU6TGFiZWwxNzc1Mzk4ODgy,https://api.github.com/repos/CorrelAid/projects/labels/output:report,output,report,36db57,FALSE,markdown / pdf report
+75,open,1842954254,MDU6TGFiZWwxODQyOTU0MjU0,https://api.github.com/repos/CorrelAid/projects/labels/type:visualization,type,visualization,fc67b6,FALSE,"data visualization project (e.g. shiny, dashboards)"
+75,open,1829100329,MDU6TGFiZWwxODI5MTAwMzI5,https://api.github.com/repos/CorrelAid/projects/labels/year:2020,year,2020,d4c5f9,FALSE,year 2020
+74,open,1775395156,MDU6TGFiZWwxNzc1Mzk1MTU2,https://api.github.com/repos/CorrelAid/projects/labels/data:survey,data,survey,f2e085,FALSE,survey data the organization / we collected
+74,open,1775355236,MDU6TGFiZWwxNzc1MzU1MjM2,https://api.github.com/repos/CorrelAid/projects/labels/language:r,language,r,0e8a16,FALSE,r project
+74,open,1872054892,MDU6TGFiZWwxODcyMDU0ODky,https://api.github.com/repos/CorrelAid/projects/labels/sector:social,sector,social,bfdadc,FALSE,"organization works to support social causes (e.g. refugees, homeless, elderly people, ...)"
+74,open,1775359683,MDU6TGFiZWwxNzc1MzU5Njgz,https://api.github.com/repos/CorrelAid/projects/labels/stack:shiny,stack,shiny,1656f9,FALSE,shiny project
+74,open,1829100329,MDU6TGFiZWwxODI5MTAwMzI5,https://api.github.com/repos/CorrelAid/projects/labels/year:2020,year,2020,d4c5f9,FALSE,year 2020
+72,open,2512019564,MDU6TGFiZWwyNTEyMDE5NTY0,https://api.github.com/repos/CorrelAid/projects/labels/correlaidx,correlaidx,NA,d93f0b,FALSE,local chapter project
+72,open,1775355236,MDU6TGFiZWwxNzc1MzU1MjM2,https://api.github.com/repos/CorrelAid/projects/labels/language:r,language,r,0e8a16,FALSE,r project
+72,open,1775358414,MDU6TGFiZWwxNzc1MzU4NDE0,https://api.github.com/repos/CorrelAid/projects/labels/lc:rhein-main,lc,rhein-main,ea3d09,FALSE,project of local chapter rhein-main
+72,open,1775398882,MDU6TGFiZWwxNzc1Mzk4ODgy,https://api.github.com/repos/CorrelAid/projects/labels/output:report,output,report,36db57,FALSE,markdown / pdf report
+72,open,1842956929,MDU6TGFiZWwxODQyOTU2OTI5,https://api.github.com/repos/CorrelAid/projects/labels/type:automation,type,automation,fc67b6,FALSE,automation project (improving processes with code / scripts)
+72,open,1829100329,MDU6TGFiZWwxODI5MTAwMzI5,https://api.github.com/repos/CorrelAid/projects/labels/year:2020,year,2020,d4c5f9,FALSE,year 2020
+71,open,2512019564,MDU6TGFiZWwyNTEyMDE5NTY0,https://api.github.com/repos/CorrelAid/projects/labels/correlaidx,correlaidx,NA,d93f0b,FALSE,local chapter project
+71,open,1849083665,MDU6TGFiZWwxODQ5MDgzNjY1,https://api.github.com/repos/CorrelAid/projects/labels/data:process,data,process,f2e085,FALSE,process data from the organization's work
+71,open,1775355645,MDU6TGFiZWwxNzc1MzU1NjQ1,https://api.github.com/repos/CorrelAid/projects/labels/language:python,language,python,0e8a16,FALSE,python project
+71,open,2509126107,MDU6TGFiZWwyNTA5MTI2MTA3,https://api.github.com/repos/CorrelAid/projects/labels/lc:munich,lc,munich,d93f0b,FALSE,project of CorrelAidX Munich
+71,open,1872054892,MDU6TGFiZWwxODcyMDU0ODky,https://api.github.com/repos/CorrelAid/projects/labels/sector:social,sector,social,bfdadc,FALSE,"organization works to support social causes (e.g. refugees, homeless, elderly people, ...)"
+71,open,1905099555,MDU6TGFiZWwxOTA1MDk5NTU1,https://api.github.com/repos/CorrelAid/projects/labels/type:webdev,type,webdev,fc67b6,FALSE,Web development project
+71,open,1829100329,MDU6TGFiZWwxODI5MTAwMzI5,https://api.github.com/repos/CorrelAid/projects/labels/year:2020,year,2020,d4c5f9,FALSE,year 2020
+70,open,2512019564,MDU6TGFiZWwyNTEyMDE5NTY0,https://api.github.com/repos/CorrelAid/projects/labels/correlaidx,correlaidx,NA,d93f0b,FALSE,local chapter project
+70,open,1875667328,MDU6TGFiZWwxODc1NjY3MzI4,https://api.github.com/repos/CorrelAid/projects/labels/data:opendata,data,opendata,f2e085,FALSE,freely provided open data
+70,open,1775355645,MDU6TGFiZWwxNzc1MzU1NjQ1,https://api.github.com/repos/CorrelAid/projects/labels/language:python,language,python,0e8a16,FALSE,python project
+70,open,1775355236,MDU6TGFiZWwxNzc1MzU1MjM2,https://api.github.com/repos/CorrelAid/projects/labels/language:r,language,r,0e8a16,FALSE,r project
+70,open,1905096844,MDU6TGFiZWwxOTA1MDk2ODQ0,https://api.github.com/repos/CorrelAid/projects/labels/lc:konstanz,lc,konstanz,ea3d09,FALSE,local chapter konstanz
+70,open,1832926871,MDU6TGFiZWwxODMyOTI2ODcx,https://api.github.com/repos/CorrelAid/projects/labels/type:opensource,type,opensource,fc67b6,FALSE,open source development
+70,open,1829100329,MDU6TGFiZWwxODI5MTAwMzI5,https://api.github.com/repos/CorrelAid/projects/labels/year:2020,year,2020,d4c5f9,FALSE,year 2020
+69,open,1875667328,MDU6TGFiZWwxODc1NjY3MzI4,https://api.github.com/repos/CorrelAid/projects/labels/data:opendata,data,opendata,f2e085,FALSE,freely provided open data
+68,open,2512019564,MDU6TGFiZWwyNTEyMDE5NTY0,https://api.github.com/repos/CorrelAid/projects/labels/correlaidx,correlaidx,NA,d93f0b,FALSE,local chapter project
+68,open,1849083665,MDU6TGFiZWwxODQ5MDgzNjY1,https://api.github.com/repos/CorrelAid/projects/labels/data:process,data,process,f2e085,FALSE,process data from the organization's work
+68,open,1775355645,MDU6TGFiZWwxNzc1MzU1NjQ1,https://api.github.com/repos/CorrelAid/projects/labels/language:python,language,python,0e8a16,FALSE,python project
+68,open,1775355236,MDU6TGFiZWwxNzc1MzU1MjM2,https://api.github.com/repos/CorrelAid/projects/labels/language:r,language,r,0e8a16,FALSE,r project
+68,open,1775356701,MDU6TGFiZWwxNzc1MzU2NzAx,https://api.github.com/repos/CorrelAid/projects/labels/lc:berlin,lc,berlin,ea3d09,FALSE,project of local chapter berlin
+68,open,1869774142,MDU6TGFiZWwxODY5Nzc0MTQy,https://api.github.com/repos/CorrelAid/projects/labels/sector:environment,sector,environment,bfdadc,FALSE,organizations works in environment or is committed to protecting the environment through its actions
+68,open,1775397004,MDU6TGFiZWwxNzc1Mzk3MDA0,https://api.github.com/repos/CorrelAid/projects/labels/type:exploratory,type,exploratory,fc67b6,FALSE,exploratory data analysis
+68,open,1829100329,MDU6TGFiZWwxODI5MTAwMzI5,https://api.github.com/repos/CorrelAid/projects/labels/year:2020,year,2020,d4c5f9,FALSE,year 2020
+67,open,2512019564,MDU6TGFiZWwyNTEyMDE5NTY0,https://api.github.com/repos/CorrelAid/projects/labels/correlaidx,correlaidx,NA,d93f0b,FALSE,local chapter project
+67,open,1875667328,MDU6TGFiZWwxODc1NjY3MzI4,https://api.github.com/repos/CorrelAid/projects/labels/data:opendata,data,opendata,f2e085,FALSE,freely provided open data
+67,open,1849083665,MDU6TGFiZWwxODQ5MDgzNjY1,https://api.github.com/repos/CorrelAid/projects/labels/data:process,data,process,f2e085,FALSE,process data from the organization's work
+67,open,1842935524,MDU6TGFiZWwxODQyOTM1NTI0,https://api.github.com/repos/CorrelAid/projects/labels/lc:paris,lc,paris,ea3d09,FALSE,
+67,open,1848215844,MDU6TGFiZWwxODQ4MjE1ODQ0,https://api.github.com/repos/CorrelAid/projects/labels/type:supervisedlearning,type,supervisedlearning,fc67b6,FALSE,classification or prediction with supervised machine learning models
+66,open,2512019564,MDU6TGFiZWwyNTEyMDE5NTY0,https://api.github.com/repos/CorrelAid/projects/labels/correlaidx,correlaidx,NA,d93f0b,FALSE,local chapter project
+66,open,1875667328,MDU6TGFiZWwxODc1NjY3MzI4,https://api.github.com/repos/CorrelAid/projects/labels/data:opendata,data,opendata,f2e085,FALSE,freely provided open data
+66,open,1869772143,MDU6TGFiZWwxODY5NzcyMTQz,https://api.github.com/repos/CorrelAid/projects/labels/lc:france,lc,france,ea3d09,FALSE,CorrelAidX paris and france generally
+66,open,1829100329,MDU6TGFiZWwxODI5MTAwMzI5,https://api.github.com/repos/CorrelAid/projects/labels/year:2020,year,2020,d4c5f9,FALSE,year 2020
+65,open,1842950910,MDU6TGFiZWwxODQyOTUwOTEw,https://api.github.com/repos/CorrelAid/projects/labels/data:administrative,data,administrative,f2e085,FALSE,administrative / public data from government
+65,open,1875667328,MDU6TGFiZWwxODc1NjY3MzI4,https://api.github.com/repos/CorrelAid/projects/labels/data:opendata,data,opendata,f2e085,FALSE,freely provided open data
+65,open,1775355645,MDU6TGFiZWwxNzc1MzU1NjQ1,https://api.github.com/repos/CorrelAid/projects/labels/language:python,language,python,0e8a16,FALSE,python project
+65,open,1775355236,MDU6TGFiZWwxNzc1MzU1MjM2,https://api.github.com/repos/CorrelAid/projects/labels/language:r,language,r,0e8a16,FALSE,r project
+65,open,1869773069,MDU6TGFiZWwxODY5NzczMDY5,https://api.github.com/repos/CorrelAid/projects/labels/sector:politics,sector,politics,bfdadc,FALSE,"organization works in political education, democracy, etc."
+65,open,1842954254,MDU6TGFiZWwxODQyOTU0MjU0,https://api.github.com/repos/CorrelAid/projects/labels/type:visualization,type,visualization,fc67b6,FALSE,"data visualization project (e.g. shiny, dashboards)"
+64,open,1775355236,MDU6TGFiZWwxNzc1MzU1MjM2,https://api.github.com/repos/CorrelAid/projects/labels/language:r,language,r,0e8a16,FALSE,r project
+64,open,1832926871,MDU6TGFiZWwxODMyOTI2ODcx,https://api.github.com/repos/CorrelAid/projects/labels/type:opensource,type,opensource,fc67b6,FALSE,open source development
+63,open,1775355236,MDU6TGFiZWwxNzc1MzU1MjM2,https://api.github.com/repos/CorrelAid/projects/labels/language:r,language,r,0e8a16,FALSE,r project
+63,open,1775398882,MDU6TGFiZWwxNzc1Mzk4ODgy,https://api.github.com/repos/CorrelAid/projects/labels/output:report,output,report,36db57,FALSE,markdown / pdf report
+63,open,1869773069,MDU6TGFiZWwxODY5NzczMDY5,https://api.github.com/repos/CorrelAid/projects/labels/sector:politics,sector,politics,bfdadc,FALSE,"organization works in political education, democracy, etc."
+63,open,1775397004,MDU6TGFiZWwxNzc1Mzk3MDA0,https://api.github.com/repos/CorrelAid/projects/labels/type:exploratory,type,exploratory,fc67b6,FALSE,exploratory data analysis
+63,open,1829100329,MDU6TGFiZWwxODI5MTAwMzI5,https://api.github.com/repos/CorrelAid/projects/labels/year:2020,year,2020,d4c5f9,FALSE,year 2020
+62,open,2512019564,MDU6TGFiZWwyNTEyMDE5NTY0,https://api.github.com/repos/CorrelAid/projects/labels/correlaidx,correlaidx,NA,d93f0b,FALSE,local chapter project
+62,open,1849083665,MDU6TGFiZWwxODQ5MDgzNjY1,https://api.github.com/repos/CorrelAid/projects/labels/data:process,data,process,f2e085,FALSE,process data from the organization's work
+62,open,1775355236,MDU6TGFiZWwxNzc1MzU1MjM2,https://api.github.com/repos/CorrelAid/projects/labels/language:r,language,r,0e8a16,FALSE,r project
+62,open,1775359177,MDU6TGFiZWwxNzc1MzU5MTc3,https://api.github.com/repos/CorrelAid/projects/labels/lc:bremen,lc,bremen,ea3d09,FALSE,project of local chapter bremen
+62,open,1869773069,MDU6TGFiZWwxODY5NzczMDY5,https://api.github.com/repos/CorrelAid/projects/labels/sector:politics,sector,politics,bfdadc,FALSE,"organization works in political education, democracy, etc."
+62,open,1848215844,MDU6TGFiZWwxODQ4MjE1ODQ0,https://api.github.com/repos/CorrelAid/projects/labels/type:supervisedlearning,type,supervisedlearning,fc67b6,FALSE,classification or prediction with supervised machine learning models
+62,open,1829100329,MDU6TGFiZWwxODI5MTAwMzI5,https://api.github.com/repos/CorrelAid/projects/labels/year:2020,year,2020,d4c5f9,FALSE,year 2020
+61,open,2512019564,MDU6TGFiZWwyNTEyMDE5NTY0,https://api.github.com/repos/CorrelAid/projects/labels/correlaidx,correlaidx,NA,d93f0b,FALSE,local chapter project
+61,open,1849083665,MDU6TGFiZWwxODQ5MDgzNjY1,https://api.github.com/repos/CorrelAid/projects/labels/data:process,data,process,f2e085,FALSE,process data from the organization's work
+61,open,1775355645,MDU6TGFiZWwxNzc1MzU1NjQ1,https://api.github.com/repos/CorrelAid/projects/labels/language:python,language,python,0e8a16,FALSE,python project
+61,open,1869772143,MDU6TGFiZWwxODY5NzcyMTQz,https://api.github.com/repos/CorrelAid/projects/labels/lc:france,lc,france,ea3d09,FALSE,CorrelAidX paris and france generally
+61,open,1842935524,MDU6TGFiZWwxODQyOTM1NTI0,https://api.github.com/repos/CorrelAid/projects/labels/lc:paris,lc,paris,ea3d09,FALSE,
+61,open,1849085793,MDU6TGFiZWwxODQ5MDg1Nzkz,https://api.github.com/repos/CorrelAid/projects/labels/sector:health,sector,health,bfdadc,FALSE,the organization does work in the health sector
+61,open,1848215844,MDU6TGFiZWwxODQ4MjE1ODQ0,https://api.github.com/repos/CorrelAid/projects/labels/type:supervisedlearning,type,supervisedlearning,fc67b6,FALSE,classification or prediction with supervised machine learning models
+61,open,1829100329,MDU6TGFiZWwxODI5MTAwMzI5,https://api.github.com/repos/CorrelAid/projects/labels/year:2020,year,2020,d4c5f9,FALSE,year 2020
+59,closed,1849083665,MDU6TGFiZWwxODQ5MDgzNjY1,https://api.github.com/repos/CorrelAid/projects/labels/data:process,data,process,f2e085,FALSE,process data from the organization's work
+59,closed,1775355645,MDU6TGFiZWwxNzc1MzU1NjQ1,https://api.github.com/repos/CorrelAid/projects/labels/language:python,language,python,0e8a16,FALSE,python project
+59,closed,1775356701,MDU6TGFiZWwxNzc1MzU2NzAx,https://api.github.com/repos/CorrelAid/projects/labels/lc:berlin,lc,berlin,ea3d09,FALSE,project of local chapter berlin
+59,closed,1875654711,MDU6TGFiZWwxODc1NjU0NzEx,https://api.github.com/repos/CorrelAid/projects/labels/stack:jupyternotebooks,stack,jupyternotebooks,1656f9,FALSE,
+59,closed,1775397004,MDU6TGFiZWwxNzc1Mzk3MDA0,https://api.github.com/repos/CorrelAid/projects/labels/type:exploratory,type,exploratory,fc67b6,FALSE,exploratory data analysis
+59,closed,1775408977,MDU6TGFiZWwxNzc1NDA4OTc3,https://api.github.com/repos/CorrelAid/projects/labels/year:2019,year,2019,d4c5f9,FALSE,
+58,open,1869773069,MDU6TGFiZWwxODY5NzczMDY5,https://api.github.com/repos/CorrelAid/projects/labels/sector:politics,sector,politics,bfdadc,FALSE,"organization works in political education, democracy, etc."
+57,open,2512019564,MDU6TGFiZWwyNTEyMDE5NTY0,https://api.github.com/repos/CorrelAid/projects/labels/correlaidx,correlaidx,NA,d93f0b,FALSE,local chapter project
+57,open,1869772143,MDU6TGFiZWwxODY5NzcyMTQz,https://api.github.com/repos/CorrelAid/projects/labels/lc:france,lc,france,ea3d09,FALSE,CorrelAidX paris and france generally
+57,open,1849085793,MDU6TGFiZWwxODQ5MDg1Nzkz,https://api.github.com/repos/CorrelAid/projects/labels/sector:health,sector,health,bfdadc,FALSE,the organization does work in the health sector
+56,closed,1842950910,MDU6TGFiZWwxODQyOTUwOTEw,https://api.github.com/repos/CorrelAid/projects/labels/data:administrative,data,administrative,f2e085,FALSE,administrative / public data from government
+56,closed,1775395156,MDU6TGFiZWwxNzc1Mzk1MTU2,https://api.github.com/repos/CorrelAid/projects/labels/data:survey,data,survey,f2e085,FALSE,survey data the organization / we collected
+56,closed,1775355236,MDU6TGFiZWwxNzc1MzU1MjM2,https://api.github.com/repos/CorrelAid/projects/labels/language:r,language,r,0e8a16,FALSE,r project
+56,closed,1775356701,MDU6TGFiZWwxNzc1MzU2NzAx,https://api.github.com/repos/CorrelAid/projects/labels/lc:berlin,lc,berlin,ea3d09,FALSE,project of local chapter berlin
+56,closed,1853194395,MDU6TGFiZWwxODUzMTk0Mzk1,https://api.github.com/repos/CorrelAid/projects/labels/type:surveydatacollection,type,surveydatacollection,fc67b6,FALSE,projects where we design and/or implement a survey for the organization
+56,closed,1842954254,MDU6TGFiZWwxODQyOTU0MjU0,https://api.github.com/repos/CorrelAid/projects/labels/type:visualization,type,visualization,fc67b6,FALSE,"data visualization project (e.g. shiny, dashboards)"
+56,closed,1829100329,MDU6TGFiZWwxODI5MTAwMzI5,https://api.github.com/repos/CorrelAid/projects/labels/year:2020,year,2020,d4c5f9,FALSE,year 2020
+55,open,1849083665,MDU6TGFiZWwxODQ5MDgzNjY1,https://api.github.com/repos/CorrelAid/projects/labels/data:process,data,process,f2e085,FALSE,process data from the organization's work
+55,open,1775355236,MDU6TGFiZWwxNzc1MzU1MjM2,https://api.github.com/repos/CorrelAid/projects/labels/language:r,language,r,0e8a16,FALSE,r project
+55,open,1872054892,MDU6TGFiZWwxODcyMDU0ODky,https://api.github.com/repos/CorrelAid/projects/labels/sector:social,sector,social,bfdadc,FALSE,"organization works to support social causes (e.g. refugees, homeless, elderly people, ...)"
+55,open,1775359683,MDU6TGFiZWwxNzc1MzU5Njgz,https://api.github.com/repos/CorrelAid/projects/labels/stack:shiny,stack,shiny,1656f9,FALSE,shiny project
+55,open,1842954254,MDU6TGFiZWwxODQyOTU0MjU0,https://api.github.com/repos/CorrelAid/projects/labels/type:visualization,type,visualization,fc67b6,FALSE,"data visualization project (e.g. shiny, dashboards)"
+55,open,1775408977,MDU6TGFiZWwxNzc1NDA4OTc3,https://api.github.com/repos/CorrelAid/projects/labels/year:2019,year,2019,d4c5f9,FALSE,
+54,closed,1775395156,MDU6TGFiZWwxNzc1Mzk1MTU2,https://api.github.com/repos/CorrelAid/projects/labels/data:survey,data,survey,f2e085,FALSE,survey data the organization / we collected
+54,closed,1775355236,MDU6TGFiZWwxNzc1MzU1MjM2,https://api.github.com/repos/CorrelAid/projects/labels/language:r,language,r,0e8a16,FALSE,r project
+54,closed,1838288442,MDU6TGFiZWwxODM4Mjg4NDQy,https://api.github.com/repos/CorrelAid/projects/labels/test,test,NA,b60205,FALSE,
+54,closed,1775397004,MDU6TGFiZWwxNzc1Mzk3MDA0,https://api.github.com/repos/CorrelAid/projects/labels/type:exploratory,type,exploratory,fc67b6,FALSE,exploratory data analysis
+54,closed,1829100329,MDU6TGFiZWwxODI5MTAwMzI5,https://api.github.com/repos/CorrelAid/projects/labels/year:2020,year,2020,d4c5f9,FALSE,year 2020
+53,open,2527309653,MDU6TGFiZWwyNTI3MzA5NjUz,https://api.github.com/repos/CorrelAid/projects/labels/internal,internal,NA,4c8fc9,FALSE,internal project
+53,open,1775355236,MDU6TGFiZWwxNzc1MzU1MjM2,https://api.github.com/repos/CorrelAid/projects/labels/language:r,language,r,0e8a16,FALSE,r project
+53,open,1832926871,MDU6TGFiZWwxODMyOTI2ODcx,https://api.github.com/repos/CorrelAid/projects/labels/type:opensource,type,opensource,fc67b6,FALSE,open source development
+53,open,1775408977,MDU6TGFiZWwxNzc1NDA4OTc3,https://api.github.com/repos/CorrelAid/projects/labels/year:2019,year,2019,d4c5f9,FALSE,
+52,closed,1849083665,MDU6TGFiZWwxODQ5MDgzNjY1,https://api.github.com/repos/CorrelAid/projects/labels/data:process,data,process,f2e085,FALSE,process data from the organization's work
+52,closed,1775359177,MDU6TGFiZWwxNzc1MzU5MTc3,https://api.github.com/repos/CorrelAid/projects/labels/lc:bremen,lc,bremen,ea3d09,FALSE,project of local chapter bremen
+52,closed,1829100329,MDU6TGFiZWwxODI5MTAwMzI5,https://api.github.com/repos/CorrelAid/projects/labels/year:2020,year,2020,d4c5f9,FALSE,year 2020
+51,open,1775355645,MDU6TGFiZWwxNzc1MzU1NjQ1,https://api.github.com/repos/CorrelAid/projects/labels/language:python,language,python,0e8a16,FALSE,python project
+51,open,1832926871,MDU6TGFiZWwxODMyOTI2ODcx,https://api.github.com/repos/CorrelAid/projects/labels/type:opensource,type,opensource,fc67b6,FALSE,open source development
+51,open,1829100329,MDU6TGFiZWwxODI5MTAwMzI5,https://api.github.com/repos/CorrelAid/projects/labels/year:2020,year,2020,d4c5f9,FALSE,year 2020
+50,open,2512019564,MDU6TGFiZWwyNTEyMDE5NTY0,https://api.github.com/repos/CorrelAid/projects/labels/correlaidx,correlaidx,NA,d93f0b,FALSE,local chapter project
+50,open,1842950910,MDU6TGFiZWwxODQyOTUwOTEw,https://api.github.com/repos/CorrelAid/projects/labels/data:administrative,data,administrative,f2e085,FALSE,administrative / public data from government
+50,open,1812770741,MDU6TGFiZWwxODEyNzcwNzQx,https://api.github.com/repos/CorrelAid/projects/labels/language:js,language,js,0e8a16,FALSE,javascript
+50,open,1775356701,MDU6TGFiZWwxNzc1MzU2NzAx,https://api.github.com/repos/CorrelAid/projects/labels/lc:berlin,lc,berlin,ea3d09,FALSE,project of local chapter berlin
+50,open,1842954254,MDU6TGFiZWwxODQyOTU0MjU0,https://api.github.com/repos/CorrelAid/projects/labels/type:visualization,type,visualization,fc67b6,FALSE,"data visualization project (e.g. shiny, dashboards)"
+50,open,1905099555,MDU6TGFiZWwxOTA1MDk5NTU1,https://api.github.com/repos/CorrelAid/projects/labels/type:webdev,type,webdev,fc67b6,FALSE,Web development project
+50,open,1829100329,MDU6TGFiZWwxODI5MTAwMzI5,https://api.github.com/repos/CorrelAid/projects/labels/year:2020,year,2020,d4c5f9,FALSE,year 2020
+49,closed,1775395156,MDU6TGFiZWwxNzc1Mzk1MTU2,https://api.github.com/repos/CorrelAid/projects/labels/data:survey,data,survey,f2e085,FALSE,survey data the organization / we collected
+49,closed,1842956929,MDU6TGFiZWwxODQyOTU2OTI5,https://api.github.com/repos/CorrelAid/projects/labels/type:automation,type,automation,fc67b6,FALSE,automation project (improving processes with code / scripts)
+48,closed,1842950910,MDU6TGFiZWwxODQyOTUwOTEw,https://api.github.com/repos/CorrelAid/projects/labels/data:administrative,data,administrative,f2e085,FALSE,administrative / public data from government
+48,closed,1775355236,MDU6TGFiZWwxNzc1MzU1MjM2,https://api.github.com/repos/CorrelAid/projects/labels/language:r,language,r,0e8a16,FALSE,r project
+48,closed,1869773069,MDU6TGFiZWwxODY5NzczMDY5,https://api.github.com/repos/CorrelAid/projects/labels/sector:politics,sector,politics,bfdadc,FALSE,"organization works in political education, democracy, etc."
+48,closed,1775359683,MDU6TGFiZWwxNzc1MzU5Njgz,https://api.github.com/repos/CorrelAid/projects/labels/stack:shiny,stack,shiny,1656f9,FALSE,shiny project
+48,closed,1842956929,MDU6TGFiZWwxODQyOTU2OTI5,https://api.github.com/repos/CorrelAid/projects/labels/type:automation,type,automation,fc67b6,FALSE,automation project (improving processes with code / scripts)
+48,closed,1842954254,MDU6TGFiZWwxODQyOTU0MjU0,https://api.github.com/repos/CorrelAid/projects/labels/type:visualization,type,visualization,fc67b6,FALSE,"data visualization project (e.g. shiny, dashboards)"
+48,closed,1829100329,MDU6TGFiZWwxODI5MTAwMzI5,https://api.github.com/repos/CorrelAid/projects/labels/year:2020,year,2020,d4c5f9,FALSE,year 2020
+46,open,1849083665,MDU6TGFiZWwxODQ5MDgzNjY1,https://api.github.com/repos/CorrelAid/projects/labels/data:process,data,process,f2e085,FALSE,process data from the organization's work
+46,open,1812770741,MDU6TGFiZWwxODEyNzcwNzQx,https://api.github.com/repos/CorrelAid/projects/labels/language:js,language,js,0e8a16,FALSE,javascript
+46,open,1905099555,MDU6TGFiZWwxOTA1MDk5NTU1,https://api.github.com/repos/CorrelAid/projects/labels/type:webdev,type,webdev,fc67b6,FALSE,Web development project
+46,open,1775408977,MDU6TGFiZWwxNzc1NDA4OTc3,https://api.github.com/repos/CorrelAid/projects/labels/year:2019,year,2019,d4c5f9,FALSE,
+45,open,2512019564,MDU6TGFiZWwyNTEyMDE5NTY0,https://api.github.com/repos/CorrelAid/projects/labels/correlaidx,correlaidx,NA,d93f0b,FALSE,local chapter project
+45,open,1775395156,MDU6TGFiZWwxNzc1Mzk1MTU2,https://api.github.com/repos/CorrelAid/projects/labels/data:survey,data,survey,f2e085,FALSE,survey data the organization / we collected
+45,open,2043818478,MDU6TGFiZWwyMDQzODE4NDc4,https://api.github.com/repos/CorrelAid/projects/labels/language:stata,language,stata,0e8a16,FALSE,
+45,open,1812792794,MDU6TGFiZWwxODEyNzkyNzk0,https://api.github.com/repos/CorrelAid/projects/labels/lc:netherlands,lc,netherlands,ea3d09,FALSE,project of local chapter netherlands
+45,open,1849085793,MDU6TGFiZWwxODQ5MDg1Nzkz,https://api.github.com/repos/CorrelAid/projects/labels/sector:health,sector,health,bfdadc,FALSE,the organization does work in the health sector
+44,closed,1812792794,MDU6TGFiZWwxODEyNzkyNzk0,https://api.github.com/repos/CorrelAid/projects/labels/lc:netherlands,lc,netherlands,ea3d09,FALSE,project of local chapter netherlands
+43,closed,1812792794,MDU6TGFiZWwxODEyNzkyNzk0,https://api.github.com/repos/CorrelAid/projects/labels/lc:netherlands,lc,netherlands,ea3d09,FALSE,project of local chapter netherlands
+42,closed,1812792794,MDU6TGFiZWwxODEyNzkyNzk0,https://api.github.com/repos/CorrelAid/projects/labels/lc:netherlands,lc,netherlands,ea3d09,FALSE,project of local chapter netherlands
+41,closed,1812792794,MDU6TGFiZWwxODEyNzkyNzk0,https://api.github.com/repos/CorrelAid/projects/labels/lc:netherlands,lc,netherlands,ea3d09,FALSE,project of local chapter netherlands
+40,closed,1812792794,MDU6TGFiZWwxODEyNzkyNzk0,https://api.github.com/repos/CorrelAid/projects/labels/lc:netherlands,lc,netherlands,ea3d09,FALSE,project of local chapter netherlands
+39,closed,1812792794,MDU6TGFiZWwxODEyNzkyNzk0,https://api.github.com/repos/CorrelAid/projects/labels/lc:netherlands,lc,netherlands,ea3d09,FALSE,project of local chapter netherlands
+37,open,1849083665,MDU6TGFiZWwxODQ5MDgzNjY1,https://api.github.com/repos/CorrelAid/projects/labels/data:process,data,process,f2e085,FALSE,process data from the organization's work
+37,open,1775355236,MDU6TGFiZWwxNzc1MzU1MjM2,https://api.github.com/repos/CorrelAid/projects/labels/language:r,language,r,0e8a16,FALSE,r project
+37,open,1849085793,MDU6TGFiZWwxODQ5MDg1Nzkz,https://api.github.com/repos/CorrelAid/projects/labels/sector:health,sector,health,bfdadc,FALSE,the organization does work in the health sector
+37,open,1775359683,MDU6TGFiZWwxNzc1MzU5Njgz,https://api.github.com/repos/CorrelAid/projects/labels/stack:shiny,stack,shiny,1656f9,FALSE,shiny project
+37,open,1842956929,MDU6TGFiZWwxODQyOTU2OTI5,https://api.github.com/repos/CorrelAid/projects/labels/type:automation,type,automation,fc67b6,FALSE,automation project (improving processes with code / scripts)
+37,open,1842954254,MDU6TGFiZWwxODQyOTU0MjU0,https://api.github.com/repos/CorrelAid/projects/labels/type:visualization,type,visualization,fc67b6,FALSE,"data visualization project (e.g. shiny, dashboards)"
+37,open,1775408977,MDU6TGFiZWwxNzc1NDA4OTc3,https://api.github.com/repos/CorrelAid/projects/labels/year:2019,year,2019,d4c5f9,FALSE,
+36,closed,1849083665,MDU6TGFiZWwxODQ5MDgzNjY1,https://api.github.com/repos/CorrelAid/projects/labels/data:process,data,process,f2e085,FALSE,process data from the organization's work
+36,closed,1848215844,MDU6TGFiZWwxODQ4MjE1ODQ0,https://api.github.com/repos/CorrelAid/projects/labels/type:supervisedlearning,type,supervisedlearning,fc67b6,FALSE,classification or prediction with supervised machine learning models
+36,closed,1775408977,MDU6TGFiZWwxNzc1NDA4OTc3,https://api.github.com/repos/CorrelAid/projects/labels/year:2019,year,2019,d4c5f9,FALSE,
+35,closed,1875667328,MDU6TGFiZWwxODc1NjY3MzI4,https://api.github.com/repos/CorrelAid/projects/labels/data:opendata,data,opendata,f2e085,FALSE,freely provided open data
+35,closed,1775355236,MDU6TGFiZWwxNzc1MzU1MjM2,https://api.github.com/repos/CorrelAid/projects/labels/language:r,language,r,0e8a16,FALSE,r project
+35,closed,1775359683,MDU6TGFiZWwxNzc1MzU5Njgz,https://api.github.com/repos/CorrelAid/projects/labels/stack:shiny,stack,shiny,1656f9,FALSE,shiny project
+35,closed,1842954254,MDU6TGFiZWwxODQyOTU0MjU0,https://api.github.com/repos/CorrelAid/projects/labels/type:visualization,type,visualization,fc67b6,FALSE,"data visualization project (e.g. shiny, dashboards)"
+35,closed,1775408977,MDU6TGFiZWwxNzc1NDA4OTc3,https://api.github.com/repos/CorrelAid/projects/labels/year:2019,year,2019,d4c5f9,FALSE,
+33,closed,1775395156,MDU6TGFiZWwxNzc1Mzk1MTU2,https://api.github.com/repos/CorrelAid/projects/labels/data:survey,data,survey,f2e085,FALSE,survey data the organization / we collected
+33,closed,1775355236,MDU6TGFiZWwxNzc1MzU1MjM2,https://api.github.com/repos/CorrelAid/projects/labels/language:r,language,r,0e8a16,FALSE,r project
+33,closed,1812792312,MDU6TGFiZWwxODEyNzkyMzEy,https://api.github.com/repos/CorrelAid/projects/labels/lc:mannheim,lc,mannheim,ea3d09,FALSE,project of local chapter mannheim
+33,closed,2036081582,MDU6TGFiZWwyMDM2MDgxNTgy,https://api.github.com/repos/CorrelAid/projects/labels/research-needed,research,needed,ea9e52,FALSE,
+32,open,2512019564,MDU6TGFiZWwyNTEyMDE5NTY0,https://api.github.com/repos/CorrelAid/projects/labels/correlaidx,correlaidx,NA,d93f0b,FALSE,local chapter project
+32,open,1849083665,MDU6TGFiZWwxODQ5MDgzNjY1,https://api.github.com/repos/CorrelAid/projects/labels/data:process,data,process,f2e085,FALSE,process data from the organization's work
+32,open,1775355236,MDU6TGFiZWwxNzc1MzU1MjM2,https://api.github.com/repos/CorrelAid/projects/labels/language:r,language,r,0e8a16,FALSE,r project
+32,open,1905096844,MDU6TGFiZWwxOTA1MDk2ODQ0,https://api.github.com/repos/CorrelAid/projects/labels/lc:konstanz,lc,konstanz,ea3d09,FALSE,local chapter konstanz
+32,open,1872054892,MDU6TGFiZWwxODcyMDU0ODky,https://api.github.com/repos/CorrelAid/projects/labels/sector:social,sector,social,bfdadc,FALSE,"organization works to support social causes (e.g. refugees, homeless, elderly people, ...)"
+32,open,1775359683,MDU6TGFiZWwxNzc1MzU5Njgz,https://api.github.com/repos/CorrelAid/projects/labels/stack:shiny,stack,shiny,1656f9,FALSE,shiny project
+32,open,1842954254,MDU6TGFiZWwxODQyOTU0MjU0,https://api.github.com/repos/CorrelAid/projects/labels/type:visualization,type,visualization,fc67b6,FALSE,"data visualization project (e.g. shiny, dashboards)"
+32,open,1775408977,MDU6TGFiZWwxNzc1NDA4OTc3,https://api.github.com/repos/CorrelAid/projects/labels/year:2019,year,2019,d4c5f9,FALSE,
+29,open,2512019564,MDU6TGFiZWwyNTEyMDE5NTY0,https://api.github.com/repos/CorrelAid/projects/labels/correlaidx,correlaidx,NA,d93f0b,FALSE,local chapter project
+29,open,1875667328,MDU6TGFiZWwxODc1NjY3MzI4,https://api.github.com/repos/CorrelAid/projects/labels/data:opendata,data,opendata,f2e085,FALSE,freely provided open data
+29,open,1775355236,MDU6TGFiZWwxNzc1MzU1MjM2,https://api.github.com/repos/CorrelAid/projects/labels/language:r,language,r,0e8a16,FALSE,r project
+29,open,1775359177,MDU6TGFiZWwxNzc1MzU5MTc3,https://api.github.com/repos/CorrelAid/projects/labels/lc:bremen,lc,bremen,ea3d09,FALSE,project of local chapter bremen
+29,open,1775358414,MDU6TGFiZWwxNzc1MzU4NDE0,https://api.github.com/repos/CorrelAid/projects/labels/lc:rhein-main,lc,rhein-main,ea3d09,FALSE,project of local chapter rhein-main
+29,open,1869774142,MDU6TGFiZWwxODY5Nzc0MTQy,https://api.github.com/repos/CorrelAid/projects/labels/sector:environment,sector,environment,bfdadc,FALSE,organizations works in environment or is committed to protecting the environment through its actions
+29,open,1848215844,MDU6TGFiZWwxODQ4MjE1ODQ0,https://api.github.com/repos/CorrelAid/projects/labels/type:supervisedlearning,type,supervisedlearning,fc67b6,FALSE,classification or prediction with supervised machine learning models
+29,open,1775408977,MDU6TGFiZWwxNzc1NDA4OTc3,https://api.github.com/repos/CorrelAid/projects/labels/year:2019,year,2019,d4c5f9,FALSE,
+29,open,1829100329,MDU6TGFiZWwxODI5MTAwMzI5,https://api.github.com/repos/CorrelAid/projects/labels/year:2020,year,2020,d4c5f9,FALSE,year 2020
+28,open,2512019564,MDU6TGFiZWwyNTEyMDE5NTY0,https://api.github.com/repos/CorrelAid/projects/labels/correlaidx,correlaidx,NA,d93f0b,FALSE,local chapter project
+28,open,1849083665,MDU6TGFiZWwxODQ5MDgzNjY1,https://api.github.com/repos/CorrelAid/projects/labels/data:process,data,process,f2e085,FALSE,process data from the organization's work
+28,open,1775355645,MDU6TGFiZWwxNzc1MzU1NjQ1,https://api.github.com/repos/CorrelAid/projects/labels/language:python,language,python,0e8a16,FALSE,python project
+28,open,1775358414,MDU6TGFiZWwxNzc1MzU4NDE0,https://api.github.com/repos/CorrelAid/projects/labels/lc:rhein-main,lc,rhein-main,ea3d09,FALSE,project of local chapter rhein-main
+28,open,1849085793,MDU6TGFiZWwxODQ5MDg1Nzkz,https://api.github.com/repos/CorrelAid/projects/labels/sector:health,sector,health,bfdadc,FALSE,the organization does work in the health sector
+28,open,1775397004,MDU6TGFiZWwxNzc1Mzk3MDA0,https://api.github.com/repos/CorrelAid/projects/labels/type:exploratory,type,exploratory,fc67b6,FALSE,exploratory data analysis
+28,open,1842954254,MDU6TGFiZWwxODQyOTU0MjU0,https://api.github.com/repos/CorrelAid/projects/labels/type:visualization,type,visualization,fc67b6,FALSE,"data visualization project (e.g. shiny, dashboards)"
+28,open,1775408977,MDU6TGFiZWwxNzc1NDA4OTc3,https://api.github.com/repos/CorrelAid/projects/labels/year:2019,year,2019,d4c5f9,FALSE,
+26,closed,1775355236,MDU6TGFiZWwxNzc1MzU1MjM2,https://api.github.com/repos/CorrelAid/projects/labels/language:r,language,r,0e8a16,FALSE,r project
+26,closed,1775358414,MDU6TGFiZWwxNzc1MzU4NDE0,https://api.github.com/repos/CorrelAid/projects/labels/lc:rhein-main,lc,rhein-main,ea3d09,FALSE,project of local chapter rhein-main
+26,closed,1869774142,MDU6TGFiZWwxODY5Nzc0MTQy,https://api.github.com/repos/CorrelAid/projects/labels/sector:environment,sector,environment,bfdadc,FALSE,organizations works in environment or is committed to protecting the environment through its actions
+26,closed,1872054892,MDU6TGFiZWwxODcyMDU0ODky,https://api.github.com/repos/CorrelAid/projects/labels/sector:social,sector,social,bfdadc,FALSE,"organization works to support social causes (e.g. refugees, homeless, elderly people, ...)"
+26,closed,1842956929,MDU6TGFiZWwxODQyOTU2OTI5,https://api.github.com/repos/CorrelAid/projects/labels/type:automation,type,automation,fc67b6,FALSE,automation project (improving processes with code / scripts)
+24,closed,1849083665,MDU6TGFiZWwxODQ5MDgzNjY1,https://api.github.com/repos/CorrelAid/projects/labels/data:process,data,process,f2e085,FALSE,process data from the organization's work
+24,closed,1775355236,MDU6TGFiZWwxNzc1MzU1MjM2,https://api.github.com/repos/CorrelAid/projects/labels/language:r,language,r,0e8a16,FALSE,r project
+24,closed,1775359177,MDU6TGFiZWwxNzc1MzU5MTc3,https://api.github.com/repos/CorrelAid/projects/labels/lc:bremen,lc,bremen,ea3d09,FALSE,project of local chapter bremen
+24,closed,1869773069,MDU6TGFiZWwxODY5NzczMDY5,https://api.github.com/repos/CorrelAid/projects/labels/sector:politics,sector,politics,bfdadc,FALSE,"organization works in political education, democracy, etc."
+24,closed,1848215844,MDU6TGFiZWwxODQ4MjE1ODQ0,https://api.github.com/repos/CorrelAid/projects/labels/type:supervisedlearning,type,supervisedlearning,fc67b6,FALSE,classification or prediction with supervised machine learning models
+24,closed,1775408977,MDU6TGFiZWwxNzc1NDA4OTc3,https://api.github.com/repos/CorrelAid/projects/labels/year:2019,year,2019,d4c5f9,FALSE,
+19,closed,2527309653,MDU6TGFiZWwyNTI3MzA5NjUz,https://api.github.com/repos/CorrelAid/projects/labels/internal,internal,NA,4c8fc9,FALSE,internal project
+19,closed,1775355236,MDU6TGFiZWwxNzc1MzU1MjM2,https://api.github.com/repos/CorrelAid/projects/labels/language:r,language,r,0e8a16,FALSE,r project
+19,closed,1832926871,MDU6TGFiZWwxODMyOTI2ODcx,https://api.github.com/repos/CorrelAid/projects/labels/type:opensource,type,opensource,fc67b6,FALSE,open source development
+19,closed,1775408763,MDU6TGFiZWwxNzc1NDA4NzYz,https://api.github.com/repos/CorrelAid/projects/labels/year:2018,year,2018,d4c5f9,FALSE,
+6,closed,1775395156,MDU6TGFiZWwxNzc1Mzk1MTU2,https://api.github.com/repos/CorrelAid/projects/labels/data:survey,data,survey,f2e085,FALSE,survey data the organization / we collected
+6,closed,1775355236,MDU6TGFiZWwxNzc1MzU1MjM2,https://api.github.com/repos/CorrelAid/projects/labels/language:r,language,r,0e8a16,FALSE,r project
+6,closed,1775398882,MDU6TGFiZWwxNzc1Mzk4ODgy,https://api.github.com/repos/CorrelAid/projects/labels/output:report,output,report,36db57,FALSE,markdown / pdf report
+6,closed,1775407390,MDU6TGFiZWwxNzc1NDA3Mzkw,https://api.github.com/repos/CorrelAid/projects/labels/year:2016,year,2016,d4c5f9,FALSE,
+5,closed,1775395156,MDU6TGFiZWwxNzc1Mzk1MTU2,https://api.github.com/repos/CorrelAid/projects/labels/data:survey,data,survey,f2e085,FALSE,survey data the organization / we collected
+5,closed,1775355236,MDU6TGFiZWwxNzc1MzU1MjM2,https://api.github.com/repos/CorrelAid/projects/labels/language:r,language,r,0e8a16,FALSE,r project
+5,closed,1775398882,MDU6TGFiZWwxNzc1Mzk4ODgy,https://api.github.com/repos/CorrelAid/projects/labels/output:report,output,report,36db57,FALSE,markdown / pdf report
+5,closed,1869774142,MDU6TGFiZWwxODY5Nzc0MTQy,https://api.github.com/repos/CorrelAid/projects/labels/sector:environment,sector,environment,bfdadc,FALSE,organizations works in environment or is committed to protecting the environment through its actions
+5,closed,1775397004,MDU6TGFiZWwxNzc1Mzk3MDA0,https://api.github.com/repos/CorrelAid/projects/labels/type:exploratory,type,exploratory,fc67b6,FALSE,exploratory data analysis
+1,open,1775355236,MDU6TGFiZWwxNzc1MzU1MjM2,https://api.github.com/repos/CorrelAid/projects/labels/language:r,language,r,0e8a16,FALSE,r project
+1,open,1869773069,MDU6TGFiZWwxODY5NzczMDY5,https://api.github.com/repos/CorrelAid/projects/labels/sector:politics,sector,politics,bfdadc,FALSE,"organization works in political education, democracy, etc."
+1,open,1775397004,MDU6TGFiZWwxNzc1Mzk3MDA0,https://api.github.com/repos/CorrelAid/projects/labels/type:exploratory,type,exploratory,fc67b6,FALSE,exploratory data analysis
+1,open,1842954254,MDU6TGFiZWwxODQyOTU0MjU0,https://api.github.com/repos/CorrelAid/projects/labels/type:visualization,type,visualization,fc67b6,FALSE,"data visualization project (e.g. shiny, dashboards)"
+1,open,1829100329,MDU6TGFiZWwxODI5MTAwMzI5,https://api.github.com/repos/CorrelAid/projects/labels/year:2020,year,2020,d4c5f9,FALSE,year 2020

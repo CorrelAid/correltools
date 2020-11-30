@@ -18,5 +18,5 @@ example_correlaidx_geo <-
            crs = 4326)
 
 usethis::use_data(example_correlaidx_geo, overwrite = TRUE)
-
+readr::write_csv(example_correlaidx_geo, "data/example_correlaidx_geo.csv")
 
