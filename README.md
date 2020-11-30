@@ -7,10 +7,10 @@ plots, analyses and tools in the CorrelAid context.
 ## Contribute
 
 I (@friep) have collected some mini-projects as
-[issues](https://github.com/CorrelAid/correltools/issues). Each issue
-should include a “get started” with code how to get example data that
-you can work with during development. If you want to pick up an issue,
-just comment under it and I’ll assign you\! :)
+[issues](https://github.com/CorrelAid/correltools/issues). For each
+issue there is a “get started” RMarkdown in `playground` with code how
+to get example data that you can work with during development. If you
+want to pick up an issue, just comment under it and I’ll assign you\! :)
 
 Depending on your skill levels, I imagine the contributing workflows as
 follows:
