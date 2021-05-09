@@ -23,6 +23,8 @@ If Roboto is not installed, the system's default (sans-serif) font is used.
 }
 \examples{
 library(ggplot2)
+library(showtext)
+showtext_auto() # Necessary for certain graphics devices to display the custom font
 
 ggplot(mtcars, aes(wt, mpg)) + geom_point() + theme_correlaid()
 }

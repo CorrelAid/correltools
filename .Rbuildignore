@@ -2,4 +2,5 @@
 ^\.Rproj\.user$
 ^data-raw$
 ^playground
+^README\.Rmd$
 ^LICENSE\.md$

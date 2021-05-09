@@ -16,3 +16,5 @@ Depends:
 Imports: 
     systemfonts,
     ggplot2
+Suggests: 
+    showtext

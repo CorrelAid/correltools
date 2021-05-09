@@ -13,6 +13,8 @@
 #'
 #' @examples
 #' library(ggplot2)
+#' library(showtext)
+#' showtext_auto() # Necessary for certain graphics devices to display the custom font
 #'
 #' ggplot(mtcars, aes(wt, mpg)) + geom_point() + theme_correlaid()
 theme_correlaid <- function(base_size = 14, grid = "XY") {
