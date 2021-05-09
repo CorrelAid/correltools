@@ -12,7 +12,7 @@ theme_correlaid(base_size = 14, grid = "XY")
 \item{grid}{\code{character} Panel grid ("none" or a combination of X, x, Y, y)}
 }
 \value{
-An object of class \code{theme}
+An \code{theme} object
 }
 \description{
 A theme following the \href{https://docs.correlaid.org/wiki/design-guide}{CorrelAid design guide}.
@@ -27,4 +27,10 @@ library(showtext)
 showtext_auto() # Necessary for certain graphics devices to display the custom font
 
 ggplot(mtcars, aes(wt, mpg)) + geom_point() + theme_correlaid()
+
+ggplot(example_projects_labels, aes(category)) +
+ geom_bar(show.legend = FALSE) +
+ labs(title = "Title", subtitle = "Subtitle", caption = "Caption") +
+ theme_correlaid() +
+ add_logo()
 }

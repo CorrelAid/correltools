@@ -8,7 +8,7 @@
 #' @param base_size `numeric` Base font size, given in pts
 #' @param grid `character` Panel grid ("none" or a combination of X, x, Y, y)
 #'
-#' @return An object of class `theme`
+#' @return An `theme` object
 #' @export
 #'
 #' @examples
@@ -17,6 +17,12 @@
 #' showtext_auto() # Necessary for certain graphics devices to display the custom font
 #'
 #' ggplot(mtcars, aes(wt, mpg)) + geom_point() + theme_correlaid()
+#'
+#' ggplot(example_projects_labels, aes(category)) +
+#'  geom_bar(show.legend = FALSE) +
+#'  labs(title = "Title", subtitle = "Subtitle", caption = "Caption") +
+#'  theme_correlaid() +
+#'  add_logo()
 theme_correlaid <- function(base_size = 14, grid = "XY") {
   if (length(grid) != 1 || !grepl("none|X|Y|x|y", grid)) {
     stop('`grid` must be a string: "none" or any combination of "X", "Y", "x", and "y"')
@@ -41,29 +47,33 @@ theme_correlaid <- function(base_size = 14, grid = "XY") {
       line = ggplot2::element_line(colour = colours$grey25),
       plot.title = ggplot2::element_text(
         face = "bold", color = colours$grey, size = ggplot2::rel(1.5),
-        margin = ggplot2::margin(t = 0, b = base_size * 2 / 3),
+        margin = ggplot2::margin(b = base_size * 2 / 3),
       ),
       plot.subtitle = ggplot2::element_text(
         lineheight = 1.2,
-        margin = ggplot2::margin(t = 0, b = base_size)
+        margin = ggplot2::margin(b = base_size)
+      ),
+      plot.caption = ggplot2::element_text(
+        hjust = 0,
+        margin = ggplot2::margin(t = base_size * 2 / 3)
       ),
       axis.title.x = ggplot2::element_text(
         face = "bold",
         colour = colours$grey75,
-        margin = ggplot2::margin(t = base_size * 2 / 3, r = 0, b = 0, l = 0)
+        margin = ggplot2::margin(t = base_size * 2 / 3)
       ),
       axis.title.y = ggplot2::element_text(
         face = "bold",
         colour = colours$grey75,
-        margin = ggplot2::margin(t = 0, r = base_size * 2 / 3, b = 0, l = 0)
+        margin = ggplot2::margin(r = base_size * 2 / 3)
       ),
       axis.text.x = ggplot2::element_text(
         colour = colours$grey75,
-        margin = ggplot2::margin(t = base_size / 3, r = 0, b = 0, l = 0)
+        margin = ggplot2::margin(t = base_size / 3)
       ),
       axis.text.y = ggplot2::element_text(
         colour = colours$grey75,
-        margin = ggplot2::margin(t = 0, r = base_size / 3, b = 0, l = 0)
+        margin = ggplot2::margin(r = base_size / 3)
       ),
       legend.title = ggplot2::element_text(
         face = "bold",
@@ -102,4 +112,47 @@ theme_correlaid <- function(base_size = 14, grid = "XY") {
   }
 
   ret
+}
+
+#' Add CorrelAid logo
+#'
+#' Inset CorrelAid logo to the bottom right corner of a ggplot
+#'
+#' @inheritParams theme_correlaid
+#'
+#' @return A `inset_path` object
+#' @export
+#'
+#' @examples
+#' library(ggplot2)
+#' ggplot(mtcars, aes(wt, mpg)) +
+#'   geom_point() +
+#'   labs(caption = "") +
+#'   theme_minimal() +
+#'   add_logo(base_size = 11.5)
+add_logo <- function(base_size = 14) {
+  logo <- rsvg::rsvg(
+    system.file("img", "CorrelAid-logo.svg", package = "correltools"),
+    width = base_size * 3
+  )
+
+  logo_width <- grid::unit(base_size * 1.618, "pt")
+
+  logo_grob <- grid::rasterGrob(
+    logo,
+    x = 1,
+    width = logo_width,
+    hjust = 1
+  )
+
+  plot_margin <- grid::unit(base_size * 1.4, "pt")
+
+  patchwork::inset_element(
+    logo_grob,
+    left = grid::unit(1, "npc") - plot_margin - logo_width,
+    bottom = grid::unit(0, "npc") + plot_margin,
+    right = grid::unit(1, "npc") - plot_margin,
+    top = grid::unit(0, "npc") + plot_margin + logo_width,
+    align_to = "full", clip = FALSE, on_top = FALSE
+  )
 }

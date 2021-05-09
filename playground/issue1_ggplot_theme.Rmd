@@ -17,7 +17,8 @@ ca_counts <- readr::read_csv("https://raw.githubusercontent.com/friep/correlaid-
 
 ggplot(ca_counts, aes(x = date, y = n, color = platform)) +
   geom_line() +
-  labs(title = "a title", subtitle = "a subtitle") +
-  theme_correlaid()
+  labs(title = "a title", subtitle = "a subtitle", caption = "a caption") +
+  theme_correlaid() +
+  add_logo()
 ```
 
