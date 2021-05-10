@@ -132,17 +132,17 @@ theme_correlaid <- function(base_size = 14, grid = "XY") {
 #'   theme_minimal() +
 #'   add_correlaid_logo(base_size = 11.5)
 add_correlaid_logo <- function(base_size = 14) {
-  logo <- png::readPNG(
-    system.file("img", "correlaid-icon.png", package = "correltools")
+  logo <- grImport2::readPicture(
+    system.file("img", "correlaid-icon-cairo.svg", package = "correltools")
   )
 
-  logo_width <- grid::unit(base_size * 1.618, "pt")
+  logo_width <- grid::unit(base_size * 2.1, "pt")
 
-  logo_grob <- grid::rasterGrob(
+  logo_grob <- grImport2::symbolsGrob(
     logo,
-    x = 1, y = 1,
-    width = logo_width,
-    hjust = 1, vjust = 1
+    x = grid::unit(1, "npc") - logo_width / 3,
+    y = grid::unit(0, "npc") + logo_width / 3,
+    size = logo_width
   )
 
   plot_margin <- grid::unit(base_size * 1.4, "pt")

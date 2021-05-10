@@ -18,6 +18,6 @@ Imports:
     ggplot2,
     patchwork,
     scales,
-    png
+    grImport2
 Suggests: 
     showtext
