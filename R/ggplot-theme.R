@@ -1,14 +1,14 @@
-#' ggplot theme based on CorrelAid design guide
+#' CorrelAid theme for ggplot2
 #'
-#' A theme following the [CorrelAid design guide](https://docs.correlaid.org/wiki/design-guide).
+#' A theme based on the [CorrelAid design guide](https://docs.correlaid.org/wiki/design-guide)
 #'
 #' Uses the font family [Roboto](https://fonts.google.com/specimen/Roboto).
-#' If Roboto is not installed, the system's default (sans-serif) font is used.
+#'   If Roboto is not installed, the system's default (sans-serif) font is used.
 #'
 #' @param base_size `numeric` Base font size, given in pts
 #' @param grid `character` Panel grid ("none" or a combination of X, x, Y, y)
 #'
-#' @return An `theme` object
+#' @return A `theme` object
 #' @export
 #'
 #' @examples
@@ -19,10 +19,10 @@
 #' ggplot(mtcars, aes(wt, mpg)) + geom_point() + theme_correlaid()
 #'
 #' ggplot(example_projects_labels, aes(category)) +
-#'  geom_bar(show.legend = FALSE) +
+#'  geom_bar() +
 #'  labs(title = "Title", subtitle = "Subtitle", caption = "Caption") +
 #'  theme_correlaid() +
-#'  add_logo()
+#'  add_correlaid_logo()
 theme_correlaid <- function(base_size = 14, grid = "XY") {
   if (length(grid) != 1 || !grepl("none|X|Y|x|y", grid)) {
     stop('`grid` must be a string: "none" or any combination of "X", "Y", "x", and "y"')
@@ -116,11 +116,13 @@ theme_correlaid <- function(base_size = 14, grid = "XY") {
 
 #' Add CorrelAid logo
 #'
-#' Inset CorrelAid logo to the bottom right corner of a ggplot
+#' Inset CorrelAid logo to the bottom right corner of a ggplot.
+#'
+#' Should be used in conjunction with a plot caption.
 #'
 #' @inheritParams theme_correlaid
 #'
-#' @return A `inset_path` object
+#' @return An `inset_path` object
 #' @export
 #'
 #' @examples
@@ -129,10 +131,10 @@ theme_correlaid <- function(base_size = 14, grid = "XY") {
 #'   geom_point() +
 #'   labs(caption = "") +
 #'   theme_minimal() +
-#'   add_logo(base_size = 11.5)
-add_logo <- function(base_size = 14) {
+#'   add_correlaid_logo(base_size = 11.5)
+add_correlaid_logo <- function(base_size = 14) {
   logo <- rsvg::rsvg(
-    system.file("img", "CorrelAid-logo.svg", package = "correltools"),
+    system.file("img", "correlaid-icon.svg", package = "correltools"),
     width = base_size * 3
   )
 

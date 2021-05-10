@@ -17,6 +17,7 @@ Imports:
     systemfonts,
     ggplot2,
     patchwork,
-    rsvg
+    rsvg,
+    scales
 Suggests: 
     showtext

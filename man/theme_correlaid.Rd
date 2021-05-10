@@ -2,7 +2,7 @@
 % Please edit documentation in R/ggplot-theme.R
 \name{theme_correlaid}
 \alias{theme_correlaid}
-\title{ggplot theme based on CorrelAid design guide}
+\title{CorrelAid theme for ggplot2}
 \usage{
 theme_correlaid(base_size = 14, grid = "XY")
 }
@@ -12,10 +12,10 @@ theme_correlaid(base_size = 14, grid = "XY")
 \item{grid}{\code{character} Panel grid ("none" or a combination of X, x, Y, y)}
 }
 \value{
-An \code{theme} object
+A \code{theme} object
 }
 \description{
-A theme following the \href{https://docs.correlaid.org/wiki/design-guide}{CorrelAid design guide}.
+A theme based on the \href{https://docs.correlaid.org/wiki/design-guide}{CorrelAid design guide}
 }
 \details{
 Uses the font family \href{https://fonts.google.com/specimen/Roboto}{Roboto}.
@@ -29,8 +29,8 @@ showtext_auto() # Necessary for certain graphics devices to display the custom f
 ggplot(mtcars, aes(wt, mpg)) + geom_point() + theme_correlaid()
 
 ggplot(example_projects_labels, aes(category)) +
- geom_bar(show.legend = FALSE) +
+ geom_bar() +
  labs(title = "Title", subtitle = "Subtitle", caption = "Caption") +
  theme_correlaid() +
- add_logo()
+ add_correlaid_logo()
 }
