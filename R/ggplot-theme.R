@@ -132,18 +132,17 @@ theme_correlaid <- function(base_size = 14, grid = "XY") {
 #'   theme_minimal() +
 #'   add_correlaid_logo(base_size = 11.5)
 add_correlaid_logo <- function(base_size = 14) {
-  logo <- rsvg::rsvg(
-    system.file("img", "correlaid-icon.svg", package = "correltools"),
-    width = base_size * 3
+  logo <- png::readPNG(
+    system.file("img", "correlaid-icon.png", package = "correltools")
   )
 
   logo_width <- grid::unit(base_size * 1.618, "pt")
 
   logo_grob <- grid::rasterGrob(
     logo,
-    x = 1,
+    x = 1, y = 1,
     width = logo_width,
-    hjust = 1
+    hjust = 1, vjust = 1
   )
 
   plot_margin <- grid::unit(base_size * 1.4, "pt")
