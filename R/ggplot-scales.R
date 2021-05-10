@@ -103,7 +103,7 @@ scale_colour_correlaid_c <- function(direction = 1,
 
   ggplot2::continuous_scale(
     "colour", "correlaid",
-    scales::gradient_n_pal(correlaid_pal(direction, option)(10)),
+    scales::gradient_n_pal(correlaid_pal(direction, option)(8)),
     guide = guide, ...
   )
 }
@@ -124,7 +124,7 @@ scale_fill_correlaid_c <- function(direction = 1,
 
   ggplot2::continuous_scale(
     "fill", "correlaid",
-    scales::gradient_n_pal(correlaid_pal(direction, option)(10)),
+    scales::gradient_n_pal(correlaid_pal(direction, option)(8)),
     guide = guide, ...
   )
 }
@@ -143,7 +143,7 @@ scale_colour_correlaid_b <- function(direction = 1,
 
   ggplot2::binned_scale(
     "colour", "correlaid",
-    scales::gradient_n_pal(correlaid_pal(direction, option)(10)),
+    scales::gradient_n_pal(correlaid_pal(direction, option)(8)),
     guide = guide, ...
   )
 }
@@ -164,7 +164,7 @@ scale_fill_correlaid_b <- function(direction = 1,
 
   ggplot2::binned_scale(
     "fill", "correlaid",
-    scales::gradient_n_pal(correlaid_pal(direction, option)(10)),
+    scales::gradient_n_pal(correlaid_pal(direction, option)(8)),
     guide = guide, ...
   )
 }
