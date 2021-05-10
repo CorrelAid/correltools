@@ -30,16 +30,18 @@ correlaid_pal <- function(direction = 1, option = "qualitative") {
 #'
 #' Discrete, continuous and binned ggplot2 colour and fill scales
 #'   based on the [CorrelAid design guide](https://docs.correlaid.org/wiki/design-guide).
+#'   For a list of available palettes and colours see [`correlaid_colours`].
 #'
 #' - The suffix `_d` indicates that the scale is discrete.
 #' - `_c`: continuous scale.
 #' - `_b`: binned scale.
 #'
-#' @param direction Sets the order of colors in the scale.
-#'   If 1, the default, colors are ordered from darkest to lightest.
-#'   If -1, the order of colors is reversed.
+#' @param direction Sets the order of colours in the scale:
+#'
+#'   - 1: default order
+#'   - -1: reversed order
 #' @param option A character string indicating the colour palette to use.
-#'   Available options: `r paste0(names(correltools::correlaid_colours), collapse = ", ")`.
+#'   Available options are `r paste0(names(correltools::correlaid_colours), collapse = ", ")`.
 #' @param guide A function used to create a guide or its name.
 #'   See [ggplot2::guides()] for more information.
 #' @param ... Other arguments passed on to [ggplot2::discrete_scale()],

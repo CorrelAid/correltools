@@ -14,8 +14,6 @@ An \code{inset_path} object
 }
 \description{
 Inset CorrelAid logo to the bottom right corner of a ggplot.
-}
-\details{
 Should be used in conjunction with a plot caption.
 }
 \examples{

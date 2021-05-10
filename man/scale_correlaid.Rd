@@ -61,12 +61,14 @@ scale_fill_correlaid_b(
 )
 }
 \arguments{
-\item{direction}{Sets the order of colors in the scale.
-If 1, the default, colors are ordered from darkest to lightest.
-If -1, the order of colors is reversed.}
+\item{direction}{Sets the order of colours in the scale:
+\itemize{
+\item 1: default order
+\item -1: reversed order
+}}
 
 \item{option}{A character string indicating the colour palette to use.
-Available optionsqualitative, gradient, gradient_x)`.}
+Available options arqualitative, gradient, gradient_x)`.}
 
 \item{...}{Other arguments passed on to \code{\link[ggplot2:discrete_scale]{ggplot2::discrete_scale()}},
 \code{\link[ggplot2:continuous_scale]{ggplot2::continuous_scale()}}, or \code{\link[ggplot2:binned_scale]{ggplot2::binned_scale()}}
@@ -78,6 +80,7 @@ See \code{\link[ggplot2:guides]{ggplot2::guides()}} for more information.}
 \description{
 Discrete, continuous and binned ggplot2 colour and fill scales
 based on the \href{https://docs.correlaid.org/wiki/design-guide}{CorrelAid design guide}.
+For a list of available palettes and colours see \code{\link{correlaid_colours}}.
 }
 \details{
 \itemize{

@@ -117,8 +117,7 @@ theme_correlaid <- function(base_size = 14, grid = "XY") {
 #' Add CorrelAid logo
 #'
 #' Inset CorrelAid logo to the bottom right corner of a ggplot.
-#'
-#' Should be used in conjunction with a plot caption.
+#'   Should be used in conjunction with a plot caption.
 #'
 #' @inheritParams theme_correlaid
 #'
