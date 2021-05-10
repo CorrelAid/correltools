@@ -68,7 +68,8 @@ scale_fill_correlaid_b(
 }}
 
 \item{option}{A character string indicating the colour palette to use.
-Available options arqualitative, gradient, gradient_x)`.}
+Three options are available: "qualitative", "gradient" and "gradient_x".
+See \code{\link{correlaid_colours}} for more information.}
 
 \item{...}{Other arguments passed on to \code{\link[ggplot2:discrete_scale]{ggplot2::discrete_scale()}},
 \code{\link[ggplot2:continuous_scale]{ggplot2::continuous_scale()}}, or \code{\link[ggplot2:binned_scale]{ggplot2::binned_scale()}}

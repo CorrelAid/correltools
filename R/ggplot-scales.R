@@ -41,7 +41,8 @@ correlaid_pal <- function(direction = 1, option = "qualitative") {
 #'   - 1: default order
 #'   - -1: reversed order
 #' @param option A character string indicating the colour palette to use.
-#'   Available options are `r paste0(names(correltools::correlaid_colours), collapse = ", ")`.
+#'   Three options are available: "qualitative", "gradient" and "gradient_x".
+#'   See [`correlaid_colours`] for more information.
 #' @param guide A function used to create a guide or its name.
 #'   See [ggplot2::guides()] for more information.
 #' @param ... Other arguments passed on to [ggplot2::discrete_scale()],
@@ -69,7 +70,9 @@ correlaid_pal <- function(direction = 1, option = "qualitative") {
 #' ggplot(mtcars, aes(wt, mpg, fill = mpg)) +
 #'   geom_point(shape = 21, colour = "white", size = 5) +
 #'   scale_fill_correlaid_b()
-scale_colour_correlaid_d <- function(direction = 1, option = "qualitative", ...) {
+scale_colour_correlaid_d <- function(direction = 1,
+                                     option = "qualitative",
+                                     ...) {
   ggplot2::discrete_scale(
     "colour", "correlaid",
     correlaid_pal(direction, option),
@@ -83,7 +86,9 @@ scale_color_correlaid_d <- scale_colour_correlaid_d
 
 #' @rdname scale_correlaid
 #' @export
-scale_fill_correlaid_d <- function(direction = 1, option = "qualitative", ...) {
+scale_fill_correlaid_d <- function(direction = 1,
+                                   option = "qualitative",
+                                   ...) {
   ggplot2::discrete_scale(
     "fill", "correlaid",
     correlaid_pal(direction, option),
