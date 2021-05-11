@@ -47,3 +47,22 @@ ggplot(mtcars, aes(wt, mpg, fill = mpg)) +
   theme_correlaid() +
   add_correlaid_logo()
 ```
+
+Change default ggplot2 theme and colour scales:
+
+```{r}
+theme_set(theme_correlaid())
+
+options(
+  ggplot2.discrete.colour = correltools::scale_colour_correlaid_d,
+  ggplot2.discrete.fill = correltools::scale_fill_correlaid_d,
+  ggplot2.continuous.colour = correltools::scale_colour_correlaid_c,
+  ggplot2.continuous.fill = correltools::scale_fill_correlaid_c
+)
+```
+
+```{r}
+ggplot(faithfuld, aes(waiting, eruptions)) +
+  geom_raster(aes(fill = density)) +
+  add_correlaid_logo()
+```

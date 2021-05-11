@@ -82,12 +82,23 @@ See \code{\link[ggplot2:guides]{ggplot2::guides()}} for more information.}
 Discrete, continuous and binned ggplot2 colour and fill scales
 based on the \href{https://docs.correlaid.org/wiki/design-guide}{CorrelAid design guide}.
 For a list of available palettes and colours see \code{\link{correlaid_colours}}.
+Change the values of the \code{ggplot2.continuous.colour} and \code{ggplot2.continuous.fill}
+\code{\link[=options]{options()}} to set these scales as default in ggplot2 (see Details).
 }
 \details{
+Function naming scheme:
 \itemize{
 \item The suffix \verb{_d} indicates that the scale is discrete.
 \item \verb{_c}: continuous scale.
 \item \verb{_b}: binned scale.
+}
+
+Change the following \code{\link[=options]{options()}} to set these scales as the default ggplot2 scales:\preformatted{options(
+  ggplot2.discrete.colour = correltools::scale_colour_correlaid_d,
+  ggplot2.discrete.fill = correltools::scale_fill_correlaid_d,
+  ggplot2.continuous.colour = correltools::scale_colour_correlaid_c,
+  ggplot2.continuous.fill = correltools::scale_fill_correlaid_c
+)
 }
 }
 \examples{

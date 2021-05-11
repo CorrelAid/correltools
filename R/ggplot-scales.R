@@ -53,10 +53,25 @@ correlaid_pal <- function(direction = 1, option = "qualitative") {
 #' Discrete, continuous and binned ggplot2 colour and fill scales
 #'   based on the [CorrelAid design guide](https://docs.correlaid.org/wiki/design-guide).
 #'   For a list of available palettes and colours see [`correlaid_colours`].
+#'   Change the values of the `ggplot2.continuous.colour` and `ggplot2.continuous.fill`
+#'   [options()] to set these scales as default in ggplot2 (see Details).
+#'
+#' Function naming scheme:
 #'
 #' - The suffix `_d` indicates that the scale is discrete.
 #' - `_c`: continuous scale.
 #' - `_b`: binned scale.
+#'
+#' Change the following [options()] to set these scales as the default ggplot2 scales:
+#'
+#' ```
+#' options(
+#'   ggplot2.discrete.colour = correltools::scale_colour_correlaid_d,
+#'   ggplot2.discrete.fill = correltools::scale_fill_correlaid_d,
+#'   ggplot2.continuous.colour = correltools::scale_colour_correlaid_c,
+#'   ggplot2.continuous.fill = correltools::scale_fill_correlaid_c
+#' )
+#' ```
 #'
 #' @inheritParams correlaid_pal
 #' @param guide A function used to create a guide or its name.
