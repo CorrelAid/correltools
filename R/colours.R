@@ -7,7 +7,7 @@
 #' - A "qualitative" palette
 #' - Two gradient palettes based on the CorrelAid and CorrelAidX design respectively
 #'
-#' @seealso [scale_colour_correlaid_d()] etc.
+#' @seealso [correlaid_pal()], [scale_colour_correlaid_d()] etc.
 #'
 "correlaid_colours"
 

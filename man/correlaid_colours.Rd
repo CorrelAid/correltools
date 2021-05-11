@@ -26,6 +26,6 @@ A named list consisting of three character vectors:
 }
 }
 \seealso{
-\code{\link[=scale_colour_correlaid_d]{scale_colour_correlaid_d()}} etc.
+\code{\link[=correlaid_pal]{correlaid_pal()}}, \code{\link[=scale_colour_correlaid_d]{scale_colour_correlaid_d()}} etc.
 }
 \keyword{datasets}

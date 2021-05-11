@@ -107,5 +107,5 @@ ggplot(mtcars, aes(wt, mpg, fill = mpg)) +
   scale_fill_correlaid_b()
 }
 \seealso{
-\code{\link{correlaid_colours}}
+\code{\link{correlaid_colours}}, \code{\link[=correlaid_pal]{correlaid_pal()}}
 }
