@@ -83,7 +83,9 @@ pal <- colorFactor(correlaid_colors$gradient, domain = factor(cities$year_founde
 
 ```{r widget}
 
-leaflet(cities) %>% 
+cax_map <- 
+  
+  leaflet(cities) %>% 
   
   addProviderTiles(
     providers$CartoDB,
@@ -105,6 +107,9 @@ leaflet(cities) %>%
   
   setView(lng = 9, lat = 50, zoom = 5)
 
+htmlwidgets::saveWidget(cax_map, "cax_map.html")
+
+cax_map
 ```
 
 # To do:
