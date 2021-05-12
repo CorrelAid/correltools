@@ -1,11 +1,8 @@
 correlaid_colours <- list(
   qualitative = c(
-    blue = "#3863a2",
-    red = "#f04451",
     green = "#96c342",
-    teal = "#508994",
-    black = "#3c3c3b",
-    grey = "#c4c4c4"
+    blue = "#3863a2",
+    red = "#f04451"
   ),
   gradient = c(
     "#bcd259",
@@ -26,9 +23,15 @@ correlaid_colours <- list(
     "#5b669d",
     "#3665a3",
     "#254e90"
+  ),
+  grey = c(
+    grey90 = "#3c3c3b",
+    grey75 = "#727375",
+    grey50 = "#9e9fa3",
+    grey25 = "#cdced0"
   )
 )
 
 correlaid_colors <- correlaid_colours
 
-usethis::use_data(correlaid_colours, correlaid_colors, overwrite = TRUE)
+usethis::use_data(correlaid_colours, correlaid_colors, internal = TRUE, overwrite = TRUE)

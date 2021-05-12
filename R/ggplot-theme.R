@@ -38,22 +38,20 @@ theme_correlaid <- function(base_size = 14,
     message("Roboto font not installed. Using system's default font.")
   }
 
-  colours <- list(
-    grey = "#3c3c3b",
-    grey75 = "#727375",
-    grey25 = "#cdced0"
-  )
-
   ret <- ggplot2::theme_minimal(
     base_size = base_size,
     base_line_size = base_line_size,
     base_rect_size = base_rect_size
   ) +
     ggplot2::theme(
-      text = ggplot2::element_text(family = base_family, colour = colours$grey),
-      line = ggplot2::element_line(colour = colours$grey25),
+      text = ggplot2::element_text(
+        family = base_family,
+        colour = correlaid_colours$grey[["grey90"]]
+      ),
+      line = ggplot2::element_line(colour = correlaid_colours$grey[["grey25"]]),
       plot.title = ggplot2::element_text(
-        face = "bold", color = colours$grey, size = ggplot2::rel(1.5),
+        face = "bold",
+        size = ggplot2::rel(1.5),
         margin = ggplot2::margin(b = base_size * 2 / 3),
       ),
       plot.subtitle = ggplot2::element_text(
@@ -66,34 +64,34 @@ theme_correlaid <- function(base_size = 14,
       ),
       axis.title.x = ggplot2::element_text(
         face = "bold",
-        colour = colours$grey75,
+        colour = correlaid_colours$grey[["grey75"]],
         margin = ggplot2::margin(t = base_size * 2 / 3)
       ),
       axis.title.y = ggplot2::element_text(
         face = "bold",
-        colour = colours$grey75,
+        colour = correlaid_colours$grey[["grey75"]],
         margin = ggplot2::margin(r = base_size * 2 / 3)
       ),
       axis.text.x = ggplot2::element_text(
-        colour = colours$grey75,
+        colour = correlaid_colours$grey[["grey75"]],
         margin = ggplot2::margin(t = base_size / 3)
       ),
       axis.text.y = ggplot2::element_text(
-        colour = colours$grey75,
+        colour = correlaid_colours$grey[["grey75"]],
         margin = ggplot2::margin(r = base_size / 3)
       ),
-      legend.key.size = unit(base_size * 1.1, "pt"),
+      legend.key.size = grid::unit(base_size * 1.1, "pt"),
       legend.title = ggplot2::element_text(
         face = "bold",
-        colour = colours$grey75,
+        colour = correlaid_colours$grey[["grey75"]],
         vjust = grid::unit(1, "npc") - grid::unit(base_size / 14, "pt")
       ),
-      legend.text = ggplot2::element_text(colour = colours$grey75),
+      legend.text = ggplot2::element_text(colour = correlaid_colours$grey[["grey75"]]),
       legend.position = "top",
       strip.background = ggplot2::element_blank(),
       strip.text = ggplot2::element_text(size = ggplot2::rel(1.05)),
-      panel.grid.major = ggplot2::element_line(size = rel(.7)),
-      panel.grid.minor = ggplot2::element_line(size = rel(.7)),
+      panel.grid.major = ggplot2::element_line(size = ggplot2::rel(.7)),
+      panel.grid.minor = ggplot2::element_line(size = ggplot2::rel(.7)),
       panel.background = ggplot2::element_rect(
         fill = "transparent", colour = "transparent"
       ),

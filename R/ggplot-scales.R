@@ -7,10 +7,13 @@
 #'   - 1: default order
 #'   - -1: reversed order
 #' @param option A character string indicating the colour palette to use.
-#'   Three options are available: "qualitative", "gradient" and "gradient_x".
-#'   See [`correlaid_colours`] for more information.
+#'   Four options are available:
 #'
-#' @seealso [`correlaid_colours`], [scale_colour_correlaid_d()] etc.
+#'   - "qualitative"
+#'   - "gradient" and "gradient_x", based on the CorrelAid and CorrelAidX logo respectively
+#'   - "grey"
+#'
+#' @seealso [scale_colour_correlaid_d()] etc.
 #'
 #' @return A function that takes an integer argument (the required number of colours)
 #'   and returns a character vector of colours
@@ -21,26 +24,12 @@
 #' scales::show_col(correlaid_pal(option = "gradient")(9))
 #' scales::show_col(correlaid_pal(direction = -1, option = "gradient_x")(9))
 correlaid_pal <- function(direction = 1, option = "qualitative") {
-  stopifnot(length(option) == 1 && option %in% names(correltools::correlaid_colours))
+  stopifnot(length(option) == 1 && option %in% names(correlaid_colours))
 
-  cols <- correltools::correlaid_colours[[option]]
+  cols <- correlaid_colours[[option]]
 
   function(n) {
-    if (option == "qualitative") {
-      if (n > length(correltools::correlaid_colours[[option]])) {
-        warning(
-          paste(
-            "CorrelAid qualitative colour palette only has",
-            length(correltools::correlaid_colours[[option]]),
-            'colours.\nConsider setting option = "gradient" or "gradient_x" instead.'
-          ),
-          call. = FALSE
-        )
-      }
-      cols <- unname(cols[1:n])
-    } else {
-      cols <- grDevices::colorRampPalette(cols, space = "Lab", interpolate = "spline")(n)
-    }
+    cols <- grDevices::colorRampPalette(cols, space = "Lab", interpolate = "spline")(n)
 
     if (direction < 0) rev(cols) else cols
   }
@@ -52,7 +41,7 @@ correlaid_pal <- function(direction = 1, option = "qualitative") {
 #'
 #' Discrete, continuous and binned ggplot2 colour and fill scales
 #'   based on the [CorrelAid design guide](https://docs.correlaid.org/wiki/design-guide).
-#'   For a list of available palettes and colours see [`correlaid_colours`].
+#'   For a list of available palettes and colours see [correlaid_pal()].
 #'   Change the values of the `ggplot2.continuous.colour` and `ggplot2.continuous.fill`
 #'   [options()] to set these scales as default in ggplot2 (see Details).
 #'
@@ -80,7 +69,7 @@ correlaid_pal <- function(direction = 1, option = "qualitative") {
 #'   [ggplot2::continuous_scale()], or [ggplot2::binned_scale()]
 #'   to control name, limits, breaks, labels etc.
 #'
-#' @seealso [`correlaid_colours`], [correlaid_pal()]
+#' @seealso [correlaid_pal()]
 #'
 #' @rdname scale_correlaid
 #'
@@ -135,10 +124,6 @@ scale_colour_correlaid_c <- function(direction = 1,
                                      option = "gradient",
                                      guide = "colourbar",
                                      ...) {
-  if (option == "qualitative") {
-    stop("Qualitative palette cannot be used with a continuous scale.")
-  }
-
   ggplot2::continuous_scale(
     "colour", "correlaid",
     scales::gradient_n_pal(correlaid_pal(direction, option)(8)),
@@ -156,10 +141,6 @@ scale_fill_correlaid_c <- function(direction = 1,
                                    option = "gradient",
                                    guide = "colourbar",
                                    ...) {
-  if (option == "qualitative") {
-    stop("Qualitative palette cannot be used with a continuous scale.")
-  }
-
   ggplot2::continuous_scale(
     "fill", "correlaid",
     scales::gradient_n_pal(correlaid_pal(direction, option)(8)),
@@ -175,10 +156,6 @@ scale_colour_correlaid_b <- function(direction = 1,
                                      option = "gradient",
                                      guide = "coloursteps",
                                      ...) {
-  if (option == "qualitative") {
-    stop("Qualitative palette cannot be used with a continuous scale.")
-  }
-
   ggplot2::binned_scale(
     "colour", "correlaid",
     scales::gradient_n_pal(correlaid_pal(direction, option)(8)),
@@ -196,10 +173,6 @@ scale_fill_correlaid_b <- function(direction = 1,
                                    option = "gradient",
                                    guide = "coloursteps",
                                    ...) {
-  if (option == "qualitative") {
-    stop("Qualitative palette cannot be used with a continuous scale.")
-  }
-
   ggplot2::binned_scale(
     "fill", "correlaid",
     scales::gradient_n_pal(correlaid_pal(direction, option)(8)),

@@ -14,8 +14,12 @@ correlaid_pal(direction = 1, option = "qualitative")
 }}
 
 \item{option}{A character string indicating the colour palette to use.
-Three options are available: "qualitative", "gradient" and "gradient_x".
-See \code{\link{correlaid_colours}} for more information.}
+Four options are available:
+\itemize{
+\item "qualitative"
+\item "gradient" and "gradient_x", based on the CorrelAid and CorrelAidX logo respectively
+\item "grey"
+}}
 }
 \value{
 A function that takes an integer argument (the required number of colours)
@@ -30,5 +34,5 @@ scales::show_col(correlaid_pal(option = "gradient")(9))
 scales::show_col(correlaid_pal(direction = -1, option = "gradient_x")(9))
 }
 \seealso{
-\code{\link{correlaid_colours}}, \code{\link[=scale_colour_correlaid_d]{scale_colour_correlaid_d()}} etc.
+\code{\link[=scale_colour_correlaid_d]{scale_colour_correlaid_d()}} etc.
 }
