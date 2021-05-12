@@ -1,15 +1,113 @@
 ---
 title: "issue2 - correlaidx map"
-output: html_document
+author: "Christine"
+date: "`r Sys.Date()`"
+output: 
+  html_document:
+      code_folding: hide
+
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+
+library(here)
+library(tidyverse)
+library(leaflet)
+
 ```
 
 # Load data
-```{r}
+
+```{r data}
+
 cax_cities <- readr::read_csv("https://raw.githubusercontent.com/CorrelAid/correltools/main/data/example_correlaidx_geo.csv")
 
 ```
 
+# Define colors
+
+(can be omitted when color function is implemented, see PR by Long)
+
+```{r colors}
+
+correlaid_colours <- list(
+  qualitative = c(
+    blue = "#3863a2",
+    red = "#f04451",
+    green = "#96c342",
+    teal = "#508994",
+    black = "#3c3c3b",
+    grey = "#c4c4c4"
+  ),
+  gradient = c(
+    "#bcd259",
+    "#96c246",
+    "#78a972",
+    "#6fa080",
+    "#508994",
+    "#3665a3",
+    "#3c61aa",
+    "#2d3b5a"
+  ),
+  gradient_x = c(
+    "#f04451",
+    "#e35564",
+    "#b65976",
+    "#906289",
+    "#7b6490",
+    "#5b669d",
+    "#3665a3",
+    "#254e90"
+  )
+)
+
+correlaid_colors <- correlaid_colours
+```
+
+# Data preparation
+
+```{r data-prep}
+
+cities <- cax_cities %>% 
+  # Extract lat and lon from geometry column
+  mutate(lon = str_remove_all(geometry, "(^c\\()|(\\, .+\\)$)") %>% 
+           as.numeric(),
+         lat = str_remove_all(geometry, "(^c\\(.+\\, )|(\\)$)") %>% 
+           as.numeric())
+  
+pal <- colorFactor(correlaid_colors$gradient, domain = factor(cities$year_founded))
+```
+
+# Leaflet widget
+
+```{r widget}
+
+leaflet(cities) %>% 
+  
+  addProviderTiles(
+    providers$CartoDB,
+    options = providerTileOptions(opacity = 0.7)
+    ) %>% 
+  
+  addCircleMarkers(
+    color = ~pal(factor(year_founded)),
+    stroke = FALSE, 
+    fillOpacity = .8, 
+    radius = 7
+    ) %>%
+  
+  addLegend(
+    "bottomright", pal = pal, values = ~factor(year_founded),
+    title = "Year founded",
+    opacity = 1
+  ) %>% 
+  
+  setView(lng = 9, lat = 50, zoom = 5)
+
+```
+
+# To do:
+
+- add labels with chapter names, maybe include links to contact
+- color countries with chapters in gradient_x colors
