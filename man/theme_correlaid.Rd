@@ -4,12 +4,21 @@
 \alias{theme_correlaid}
 \title{CorrelAid theme for ggplot2}
 \usage{
-theme_correlaid(base_size = 14, grid = "XY")
+theme_correlaid(
+  base_size = 14,
+  base_line_size = base_size/28,
+  base_rect_size = base_size/28,
+  grid = "XY"
+)
 }
 \arguments{
-\item{base_size}{\code{numeric} Base font size, given in pts}
+\item{base_size}{base font size, given in pts.}
 
-\item{grid}{\code{character} Panel grid ("none" or a combination of X, x, Y, y)}
+\item{base_line_size}{base size for line elements}
+
+\item{base_rect_size}{base size for rect elements}
+
+\item{grid}{A string: panel grid ("none" or a combination of X, x, Y, y)}
 }
 \value{
 A \code{theme} object

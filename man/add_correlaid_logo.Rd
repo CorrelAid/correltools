@@ -7,7 +7,7 @@
 add_correlaid_logo(base_size = 14)
 }
 \arguments{
-\item{base_size}{\code{numeric} Base font size, given in pts}
+\item{base_size}{base font size, given in pts.}
 }
 \value{
 An \code{inset_path} object

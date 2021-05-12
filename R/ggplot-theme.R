@@ -5,8 +5,8 @@
 #' Uses the font family [Roboto](https://fonts.google.com/specimen/Roboto).
 #'   If Roboto is not installed, the system's default (sans-serif) font is used.
 #'
-#' @param base_size `numeric` Base font size, given in pts
-#' @param grid `character` Panel grid ("none" or a combination of X, x, Y, y)
+#' @inheritParams ggplot2::theme_minimal
+#' @param grid A string: panel grid ("none" or a combination of X, x, Y, y)
 #'
 #' @return A `theme` object
 #' @export
@@ -23,7 +23,10 @@
 #'  labs(title = "Title", subtitle = "Subtitle", caption = "Caption") +
 #'  theme_correlaid() +
 #'  add_correlaid_logo()
-theme_correlaid <- function(base_size = 14, grid = "XY") {
+theme_correlaid <- function(base_size = 14,
+                            base_line_size = base_size / 28,
+                            base_rect_size = base_size / 28,
+                            grid = "XY") {
   if (length(grid) != 1 || !grepl("none|X|Y|x|y", grid)) {
     stop('`grid` must be a string: "none" or any combination of "X", "Y", "x", and "y"')
   }
@@ -41,7 +44,11 @@ theme_correlaid <- function(base_size = 14, grid = "XY") {
     grey25 = "#cdced0"
   )
 
-  ret <- ggplot2::theme_minimal(base_size = base_size) +
+  ret <- ggplot2::theme_minimal(
+    base_size = base_size,
+    base_line_size = base_line_size,
+    base_rect_size = base_rect_size
+  ) +
     ggplot2::theme(
       text = ggplot2::element_text(family = base_family, colour = colours$grey),
       line = ggplot2::element_line(colour = colours$grey25),
@@ -75,15 +82,18 @@ theme_correlaid <- function(base_size = 14, grid = "XY") {
         colour = colours$grey75,
         margin = ggplot2::margin(r = base_size / 3)
       ),
+      legend.key.size = unit(base_size * 1.1, "pt"),
       legend.title = ggplot2::element_text(
         face = "bold",
-        colour = colours$grey75
+        colour = colours$grey75,
+        vjust = grid::unit(1, "npc") - grid::unit(base_size / 14, "pt")
       ),
+      legend.text = ggplot2::element_text(colour = colours$grey75),
       legend.position = "top",
       strip.background = ggplot2::element_blank(),
       strip.text = ggplot2::element_text(size = ggplot2::rel(1.05)),
-      panel.grid.major = ggplot2::element_line(size = .35),
-      panel.grid.minor = ggplot2::element_line(size = .35),
+      panel.grid.major = ggplot2::element_line(size = rel(.7)),
+      panel.grid.minor = ggplot2::element_line(size = rel(.7)),
       panel.background = ggplot2::element_rect(
         fill = "transparent", colour = "transparent"
       ),

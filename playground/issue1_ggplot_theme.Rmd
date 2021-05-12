@@ -25,7 +25,7 @@ ggplot(ca_counts, aes(x = date, y = n, color = platform)) +
 
 ```{r}
 ggplot(example_projects_labels, aes(category, fill = category)) +
-  geom_bar(show.legend = FALSE) +
+  geom_bar() +
   scale_fill_correlaid_d(option = "gradient") +
   labs(title = "Title", subtitle = "Subtitle", caption = "Caption") +
   theme_correlaid(grid = "Y") +
