@@ -4,7 +4,7 @@ author: "Christine"
 date: "`r Sys.Date()`"
 output: 
   html_document:
-      code_folding: hide
+      code_folding: show
 
 ---
 
@@ -13,6 +13,8 @@ knitr::opts_chunk$set(echo = TRUE)
 
 library(here)
 library(tidyverse)
+library(glue)
+library(sf)
 library(leaflet)
 
 ```
@@ -22,6 +24,23 @@ library(leaflet)
 ```{r data}
 
 cax_cities <- readr::read_csv("https://raw.githubusercontent.com/CorrelAid/correltools/main/data/example_correlaidx_geo.csv")
+
+cax_links <- 
+  map_chr(
+    c("berlin/", "bremen/", "cologne/", "dortmund/", "goettingen/", "hamburg/", "karlsruhe/", "konstanz/", "leipzig/", 
+      "mannheim/", "munich/", "netherlands/", "paris/", "rhein-main/", "ruhrgebiet/", "stuttgart/", "switzerland/"),
+    ~paste0("https://correlaid.org/correlaid-x/", .x)
+    ) %>% 
+  tibble(
+    link = ., 
+    chapter = c("Berlin", "Bremen", "Cologne/Bonn", "Dortmund", NA, "Hamburg", "Karlsruhe", "Konstanz", 
+                "Leipzig", "Mannheim", "Munich", "Nederland", "Paris", "Rhein-Main", NA, "Stuttgart", "Switzerland")
+    )
+
+cntrs <- 
+  rnaturalearth::ne_countries(country = c("Germany", "Netherlands", "France", "Switzerland"),
+                              scale = "large", returnclass = "sf") %>% 
+  st_set_crs(4326)
 
 ```
 
@@ -69,14 +88,20 @@ correlaid_colors <- correlaid_colours
 
 ```{r data-prep}
 
+# CAX data
 cities <- cax_cities %>% 
   # Extract lat and lon from geometry column
   mutate(lon = str_remove_all(geometry, "(^c\\()|(\\, .+\\)$)") %>% 
            as.numeric(),
          lat = str_remove_all(geometry, "(^c\\(.+\\, )|(\\)$)") %>% 
-           as.numeric())
-  
-pal <- colorFactor(correlaid_colors$gradient, domain = factor(cities$year_founded))
+           as.numeric()) %>% 
+  left_join(cax_links)
+
+# Color palette functions  
+pal_cities <- colorFactor(correlaid_colors$gradient, domain = factor(cities$year_founded))
+
+pal_cntrs <- colorFactor(correlaid_colors$gradient_x, domain = cntrs$name)
+
 ```
 
 # Leaflet widget
@@ -85,34 +110,53 @@ pal <- colorFactor(correlaid_colors$gradient, domain = factor(cities$year_founde
 
 cax_map <- 
   
-  leaflet(cities) %>% 
+  leaflet() %>% 
   
   addProviderTiles(
-    providers$CartoDB,
+    providers$CartoDB.Positron,
     options = providerTileOptions(opacity = 0.7)
     ) %>% 
   
-  addCircleMarkers(
-    color = ~pal(factor(year_founded)),
-    stroke = FALSE, 
+  addPolygons(
+    data = cntrs,
+    fillColor = ~pal_cntrs(name),
+    fillOpacity = .3,
+    stroke = FALSE
+  ) %>% 
+  
+  addCircles(
+    data = cities,
+    color = ~pal_cities(factor(year_founded)),
     fillOpacity = .8, 
-    radius = 7
+    radius = 12000,
+    highlightOptions = highlightOptions(
+      color = "white",
+      bringToFront = TRUE
+    ),
+    popup = ~glue("<b>CorrelaidX {chapter}</b><br/>",
+                  "<a href='{link}'>Info &#128279;</a>")
     ) %>%
   
   addLegend(
-    "bottomright", pal = pal, values = ~factor(year_founded),
+    data = cities,
+    "bottomright", pal = pal_cities, values = ~factor(year_founded),
     title = "Year founded",
     opacity = 1
   ) %>% 
   
-  setView(lng = 9, lat = 50, zoom = 5)
-
-htmlwidgets::saveWidget(cax_map, "cax_map.html")
+  setView(lng = 5.5, lat = 49.5, zoom = 5)
 
 cax_map
 ```
 
-# To do:
+## Save Widget
 
-- add labels with chapter names, maybe include links to contact
-- color countries with chapters in gradient_x colors
+```{r save}
+
+htmlwidgets::saveWidget(cax_map, "cax_map.html")
+
+```
+
+# TO DO
+
+- maybe automate CAX link collection
