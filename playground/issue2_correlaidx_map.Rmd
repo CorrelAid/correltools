@@ -23,18 +23,21 @@ library(leaflet)
 
 ```{r data}
 
-cax_cities <- readr::read_csv("https://raw.githubusercontent.com/CorrelAid/correltools/main/data/example_correlaidx_geo.csv")
+cax_cities <- 
+  readr::read_csv("https://raw.githubusercontent.com/CorrelAid/correltools/main/data/example_correlaidx_geo.csv")
 
 cax_links <- 
   map_chr(
-    c("berlin/", "bremen/", "cologne/", "dortmund/", "goettingen/", "hamburg/", "karlsruhe/", "konstanz/", "leipzig/", 
-      "mannheim/", "munich/", "netherlands/", "paris/", "rhein-main/", "ruhrgebiet/", "stuttgart/", "switzerland/"),
+    c("berlin/", "bremen/", "cologne/", "dortmund/", "goettingen/", "hamburg/", 
+      "karlsruhe/", "konstanz/", "leipzig/", "mannheim/", "munich/", "netherlands/", 
+      "paris/", "rhein-main/", "ruhrgebiet/", "stuttgart/", "switzerland/"),
     ~paste0("https://correlaid.org/correlaid-x/", .x)
     ) %>% 
   tibble(
     link = ., 
-    chapter = c("Berlin", "Bremen", "Cologne/Bonn", "Dortmund", NA, "Hamburg", "Karlsruhe", "Konstanz", 
-                "Leipzig", "Mannheim", "Munich", "Nederland", "Paris", "Rhein-Main", NA, "Stuttgart", "Switzerland")
+    chapter = c("Berlin", "Bremen", "Cologne/Bonn", "Dortmund", NA, "Hamburg", 
+                "Karlsruhe", "Konstanz", "Leipzig", "Mannheim", "Munich", "Nederland", 
+                "Paris", "Rhein-Main", NA, "Stuttgart", "Switzerland")
     )
 
 cntrs <- 
@@ -97,7 +100,7 @@ cities <- cax_cities %>%
            as.numeric()) %>% 
   left_join(cax_links)
 
-# Color palette functions  
+# Color palette functions (leaflet package)
 pal_cities <- colorFactor(correlaid_colors$gradient, domain = factor(cities$year_founded))
 
 pal_cntrs <- colorFactor(correlaid_colors$gradient_x, domain = cntrs$name)
@@ -139,7 +142,9 @@ cax_map <-
   
   addLegend(
     data = cities,
-    "bottomright", pal = pal_cities, values = ~factor(year_founded),
+    "bottomright", 
+    pal = pal_cities, 
+    values = ~factor(year_founded),
     title = "Year founded",
     opacity = 1
   ) %>% 
