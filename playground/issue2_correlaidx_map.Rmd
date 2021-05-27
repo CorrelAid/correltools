@@ -158,7 +158,7 @@ cax_map
 
 ```{r save}
 
-htmlwidgets::saveWidget(cax_map, "cax_map.html")
+htmlwidgets::saveWidget(cax_map, "issue2_map_widget.html")
 
 ```
 
