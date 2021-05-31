@@ -1,20 +1,68 @@
 ---
 title: "issue1 - ggplot theme"
-author: "Frie"
-date: "11/30/2020"
+author: "Frie, Long"
+date: "`r Sys.Date()`"
 output: html_document
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = TRUE, dev = "ragg_png")
 ```
 
 ```{r}
+library(correltools)
 library(ggplot2)
+
 ca_counts <- readr::read_csv("https://raw.githubusercontent.com/friep/correlaid-utils/main/correlaid-analytics/data/all_daily.csv")
 
-ggplot(ca_counts, aes(x = date, y = n, color = platform))+
-  geom_line()+
-  labs(title = "a title", subtitle = "a subtitle")
+ggplot(ca_counts, aes(x = date, y = n, color = platform)) +
+  geom_line(size = 1) +
+  scale_colour_correlaid_d() +
+  labs(title = "a title", subtitle = "a subtitle", caption = "a caption") +
+  theme_correlaid() +
+  add_correlaid_logo()
 ```
 
+```{r}
+ggplot(example_projects_labels, aes(category, fill = category)) +
+  geom_bar() +
+  scale_fill_correlaid_d(option = "gradient") +
+  labs(title = "Title", subtitle = "Subtitle", caption = "Caption") +
+  theme_correlaid(grid = "Y") +
+  add_correlaid_logo()
+```
+
+```{r}
+ggplot(mtcars, aes(wt, mpg, colour = mpg)) +
+  geom_point(size = 5) +
+  scale_colour_correlaid_c(option = "gradient_x") +
+  theme_correlaid() +
+  add_correlaid_logo()
+```
+
+```{r}
+ggplot(mtcars, aes(wt, mpg, fill = mpg)) +
+  geom_point(shape = 21, colour = "white", size = 5) +
+  scale_fill_correlaid_b() +
+  theme_correlaid() +
+  add_correlaid_logo()
+```
+
+Change default ggplot2 theme and colour scales:
+
+```{r}
+theme_set(theme_correlaid())
+
+options(
+  ggplot2.discrete.colour = correltools::scale_colour_correlaid_d,
+  ggplot2.discrete.fill = correltools::scale_fill_correlaid_d,
+  ggplot2.continuous.colour = correltools::scale_colour_correlaid_c,
+  ggplot2.continuous.fill = correltools::scale_fill_correlaid_c
+)
+```
+
+```{r}
+ggplot(faithfuld, aes(waiting, eruptions)) +
+  geom_raster(aes(fill = density)) +
+  add_correlaid_logo()
+```
