@@ -1,11 +1,11 @@
 Package: correltools
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Misc Tools for CorrelAid
 Version: 0.1.0
-Author: Who wrote it
+Authors@R: c(person(family = "Preu", given = "Frie", email = "fr1e@pm.me", role = c("aut", "cre")),
+  person(family = "Nguyen", given = "Long", role = c("aut"))
 Maintainer: Frie Preu <frie.p@correlaid.org>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
+Description: The correltools package aims to provide utility functions for useful plots, analyses and tools in the CorrelAid context.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
