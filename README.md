@@ -4,6 +4,23 @@ correltools
 The {correltools} :package: aims to provide utility functions for useful
 plots, analyses and tools in the CorrelAid context.
 
+## Installation 
+
+```r
+remotes::install_github("correlaid/correltools")
+```
+
+## Features 
+### ggplot theming
+
+set the CorrelAid ggplot2 theme. 
+```r
+library(ggplot2)
+library(correltools)
+theme_set(theme_correlaid())
+```
+
+
 ## Contribute
 
 Some mini-projects exist as
