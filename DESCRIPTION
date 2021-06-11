@@ -19,6 +19,16 @@ Imports:
     ggplot2,
     patchwork,
     scales,
-    grImport2
+    grImport2,
+    rvest,
+    leaflet,
+    sf, 
+    tmaptools,
+    xml2,
+    dplyr,
+    rnaturalearth,
+    tibble,
+    rlang
 Suggests: 
-    showtext
+    showtext,
+    glue

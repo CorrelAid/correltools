@@ -4,14 +4,13 @@
 \alias{correlaidx_map}
 \title{correlaidx_map}
 \usage{
-correlaidx_map(chapters_df = correltools::chapters_df, lang = "en")
+correlaidx_map(chapters_df, lang = "en")
 }
 \arguments{
-\item{lang}{character. language of the map. either 'en' or 'de'}
+\item{chapters_df}{tibble. tibble with all local chapters. best obtained through get_correlaidx_data()}
 
-\item{cities_df}{tibble. tibble with all local chapters. defaults to correltools::chapters_df}
+\item{lang}{character. language of the map. either 'en' or 'de'}
 }
 \description{
-returns a widget that shows correlaidx chapters on a map. The input data frame needs specific variables for it
-to work, check correltools::chapters_df to see an example.
+returns a widget that shows correlaidx chapters on a map.
 }
