@@ -17,6 +17,20 @@ remotes::install_github("correlaid/correltools")
 ```
 
 # Features 
+## CorrelAidX map
+```{r cax-map}
+library(correltools)
+#first get the data from the website and using geocoding
+chapters <- get_correlaidx_data()
+correlaidx_map(chapters)
+```
+
+Build a German version:
+```{r cax-map-de}
+chapters_de <- get_correlaidx_data(lang = 'de')
+correlaidx_map(chapters_de, lang = 'de')
+```
+
 ## ggplot theming
 ```{r setup-ggplot}
 library(ggplot2)

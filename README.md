@@ -12,6 +12,46 @@ remotes::install_github("correlaid/correltools")
 
 # Features
 
+## CorrelAidX map
+
+``` r
+library(correltools)
+#first get the data from the website and using geocoding
+chapters <- get_correlaidx_data()
+```
+
+    ## geocoding - this can take a couple of seconds
+
+    ## although coordinates are longitude/latitude, st_intersects assumes that they are planar
+    ## although coordinates are longitude/latitude, st_intersects assumes that they are planar
+
+``` r
+correlaidx_map(chapters)
+```
+
+    ## Assuming "lon" and "lat" are longitude and latitude, respectively
+
+![](README_files/figure-gfm/cax-map-1.png)<!-- -->
+
+Build a German version:
+
+``` r
+chapters_de <- get_correlaidx_data(lang = 'de')
+```
+
+    ## geocoding - this can take a couple of seconds
+
+    ## although coordinates are longitude/latitude, st_intersects assumes that they are planar
+    ## although coordinates are longitude/latitude, st_intersects assumes that they are planar
+
+``` r
+correlaidx_map(chapters_de, lang = 'de')
+```
+
+    ## Assuming "lon" and "lat" are longitude and latitude, respectively
+
+![](README_files/figure-gfm/cax-map-de-1.png)<!-- -->
+
 ## ggplot theming
 
 ``` r
