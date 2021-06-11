@@ -9,38 +9,17 @@ correlaidx_map <- function(chapters_df = correltools::chapters_df, lang = 'en') 
     stop("lang needs to be either 'de' or 'en'")
   }
 
-  # define palettes
-  correlaid_colours <- list(
-    gradient = c(
-      "#bcd259",
-      "#96c246",
-      "#78a972",
-      "#6fa080",
-      "#508994",
-      "#3665a3",
-      "#3c61aa",
-      "#2d3b5a"
-    ),
-    gradient_x = c(
-      "#f04451",
-      "#e35564",
-      "#b65976",
-      "#906289",
-      "#7b6490",
-      "#5b669d",
-      "#3665a3",
-      "#254e90"
-    )
-  )
-
   countries_sf <-
-    rnaturalearth::ne_countries(country = c("Germany", "Netherlands", "France", "Switzerland"),
+    rnaturalearth::ne_countries(continent = 'europe',
                                 scale = "large", returnclass = "sf") %>%
-    st_set_crs(4326)
+    st_set_crs(4326) %>%
+    dplyr::filter(su_a3 %in% unique(chapters_df$iso3))
 
-  pal_cities <- colorFactor(correlaid_colors$gradient, domain = factor(chapters_df$year_founded))
+  #define color palette
+  correlaidx_pal <- correltools::correlaid_pal(option = 'gradient_x')
+  year_founded <- factor(chapters_df$year_founded)
+  pal_cities <- colorFactor(correlaidx_pal(length(year_founded)), domain = year_founded)
 
-  pal_cntrs <- colorFactor(correlaid_colors$gradient_x, domain = factor(chapters_df$year_founded))
   cax_map <-
 
     leaflet() %>%
@@ -59,7 +38,7 @@ correlaidx_map <- function(chapters_df = correltools::chapters_df, lang = 'en') 
 
     addCircles(
       data = chapters_df,
-      color = ~pal_cntrs(factor(year_founded)),
+      color = ~pal_cities(factor(year_founded)),
       fillOpacity = .8,
       radius = 12000,
       highlightOptions = highlightOptions(
@@ -73,7 +52,7 @@ correlaidx_map <- function(chapters_df = correltools::chapters_df, lang = 'en') 
     addLegend(
       data = chapters_df,
       "bottomright",
-      pal = pal_cntrs,
+      pal = pal_cities,
       values = ~factor(year_founded),
       title = ifelse(lang == 'en', "Year founded", "Gründungsjahr"),
       opacity = 1
