@@ -47,7 +47,7 @@ correlaidx_map <- function(chapters_df, lang = 'en') {
         bringToFront = TRUE
       ),
       popup = ~glue::glue("<b>CorrelaidX {chapter}</b><br/>",
-                    "&#128279;<a href='{url}'>Info</a>")
+                    "&#128279;<a target='_parent' href='{url}'>Info</a>")
     ) %>%
 
     addLegend(
