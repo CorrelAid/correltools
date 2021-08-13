@@ -21,14 +21,14 @@ Imports:
     scales,
     grImport2,
     rvest,
-    leaflet,
-    sf, 
-    tmaptools,
     xml2,
     dplyr,
-    rnaturalearth,
     tibble,
     rlang
 Suggests: 
     showtext,
-    glue
+    glue,
+    sf,
+    rnaturalearth,
+    leaflet,
+    tmaptools
