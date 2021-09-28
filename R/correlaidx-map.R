@@ -70,8 +70,8 @@ correlaidx_map <- function(chapters_df, lang = 'en') {
 #'@importFrom rlang .data
 crawl_correlaidx_data <- function(lang = 'en') {
   base_url <- 'https://correlaid.org/'
-  if (lang == 'de') {
-    base_url <- paste0(base_url, 'de')
+  if (lang == 'en') {
+    base_url <- paste0(base_url, 'en')
   }
   h <- xml2::read_html(
     base_url
