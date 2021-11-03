@@ -24,6 +24,7 @@
 #'  theme_correlaid() +
 #'  add_correlaid_logo()
 theme_correlaid <- function(base_size = 14,
+                            base_family = "Roboto",
                             base_line_size = base_size / 28,
                             base_rect_size = base_size / 28,
                             grid = "XY") {
@@ -31,11 +32,9 @@ theme_correlaid <- function(base_size = 14,
     stop('`grid` must be a string: "none" or any combination of "X", "Y", "x", and "y"')
   }
 
-  if (sum(grepl("^Roboto$", systemfonts::system_fonts()$family)) > 0) {
-    base_family <- "Roboto"
-  } else {
+  if (!sum(grepl(paste0("^", base_family, "$"), systemfonts::system_fonts()$family)) > 0) {
+    message(base_family, " font not installed. Using system's default font.")
     base_family <- ""
-    message("Roboto font not installed. Using system's default font.")
   }
 
   ret <- ggplot2::theme_minimal(
