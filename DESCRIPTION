@@ -1,7 +1,7 @@
 Package: correltools
 Type: Package
 Title: Misc Tools for CorrelAid
-Version: 0.1.0
+Version: 0.1.1
 Authors@R: c(person(family = "Preu", given = "Frie", email = "fr1e@pm.me", role = c("aut", "cre")),
              person(family = "Nguyen", given = "Long", role = c("aut")),
              person(family = "Hedde-von Westernhagen", given = "Christine", role = c("aut")))
