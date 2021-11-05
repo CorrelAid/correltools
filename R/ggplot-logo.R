@@ -41,7 +41,7 @@ add_correlaid_logo <- function() {
 add_correlaid_logo_ <- function(p) {
   base_size <- p$theme$text$size %||% 11
 
-  p$label$caption <- p$label$caption %||% ""
+  p$labels$caption <- p$labels$caption %||% ""
 
   logo <- grImport2::readPicture(
     system.file("img", "correlaid-icon-cairo.svg", package = "correltools")
