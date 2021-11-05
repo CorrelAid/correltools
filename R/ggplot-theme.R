@@ -32,7 +32,7 @@ theme_correlaid <- function(base_size = 14,
     stop('`grid` must be a string: "none" or any combination of "X", "Y", "x", and "y"')
   }
 
-  if (!sum(grepl(paste0("^", base_family, "$"), systemfonts::system_fonts()$family)) > 0) {
+  if (!(base_family %in% systemfonts::system_fonts()$family)) {
     message(base_family, " font not installed. Using system's default font.")
     base_family <- ""
   }
