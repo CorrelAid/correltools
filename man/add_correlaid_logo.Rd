@@ -13,10 +13,10 @@ Inset CorrelAid logo to the bottom right corner of a ggplot.
 The size of the logo is determined by the base text size set e.g. by
 the \code{base_size} argument in \verb{theme_*()} functions.
 
-Adding the logo to a plot makes it a \code{\link[=patchwork-package]{patchwork}}.
-Please refer to the patchwork \link[=patchwork-package]{documentation} for
-instructions on how to customise its appearance, e.g. via a theme or
-scale function.
+Adding the logo to a plot makes it a \code{\link[=patchwork-package]{patchwork}} object.
+Using the \code{+} operator e.g. to change the theme or scales after adding the
+logo would therefore have no effect. See example below and the
+\link[=patchwork-package]{patchwork documentation} for more details.
 }
 \examples{
 library(ggplot2)
@@ -30,6 +30,8 @@ ggplot(example_projects_labels, aes(category)) +
  add_correlaid_logo()
 
 # Change colour scale after adding logo:
+# Plot becomes a `patchwork` object after adding logo.
+# Use the `&` operator to modify ggplots in a patchwork.
 ggplot(mtcars, aes(wt, mpg)) +
   geom_point(size = 3) +
   theme_correlaid(base_size = 20) +

@@ -5,10 +5,10 @@
 #' The size of the logo is determined by the base text size set e.g. by
 #'   the `base_size` argument in `theme_*()` functions.
 #'
-#' Adding the logo to a plot makes it a [`patchwork`][patchwork-package].
-#'   Please refer to the patchwork [documentation][patchwork-package] for
-#'   instructions on how to customise its appearance, e.g. via a theme or
-#'   scale function.
+#' Adding the logo to a plot makes it a [`patchwork`][patchwork-package] object.
+#'   Using the `+` operator e.g. to change the theme or scales after adding the
+#'   logo would therefore have no effect. See example below and the
+#'   [patchwork documentation][patchwork-package] for more details.
 #'
 #' @export
 #'
@@ -24,6 +24,8 @@
 #'  add_correlaid_logo()
 #'
 #' # Change colour scale after adding logo:
+#' # Plot becomes a `patchwork` object after adding logo.
+#' # Use the `&` operator to modify ggplots in a patchwork.
 #' ggplot(mtcars, aes(wt, mpg)) +
 #'   geom_point(size = 3) +
 #'   theme_correlaid(base_size = 20) +
