@@ -24,6 +24,7 @@
 #'  theme_correlaid() +
 #'  add_correlaid_logo()
 theme_correlaid <- function(base_size = 14,
+                            base_family = "Roboto",
                             base_line_size = base_size / 28,
                             base_rect_size = base_size / 28,
                             grid = "XY") {
@@ -31,11 +32,9 @@ theme_correlaid <- function(base_size = 14,
     stop('`grid` must be a string: "none" or any combination of "X", "Y", "x", and "y"')
   }
 
-  if (sum(grepl("^Roboto$", systemfonts::system_fonts()$family)) > 0) {
-    base_family <- "Roboto"
-  } else {
+  if (!(base_family %in% systemfonts::system_fonts()$family)) {
+    message(base_family, " font not installed. Using system's default font.")
     base_family <- ""
-    message("Roboto font not installed. Using system's default font.")
   }
 
   ret <- ggplot2::theme_minimal(
@@ -120,47 +119,4 @@ theme_correlaid <- function(base_size = 14,
   }
 
   ret
-}
-
-#' Add CorrelAid logo
-#'
-#' Inset CorrelAid logo to the bottom right corner of a ggplot.
-#'   Should be used in conjunction with a plot caption.
-#'
-#' @inheritParams theme_correlaid
-#'
-#' @return An `inset_path` object
-#' @export
-#'
-#' @examples
-#' library(ggplot2)
-#' ggplot(mtcars, aes(wt, mpg)) +
-#'   geom_point() +
-#'   labs(caption = "") +
-#'   theme_minimal() +
-#'   add_correlaid_logo(base_size = 11.5)
-add_correlaid_logo <- function(base_size = 14) {
-  logo <- grImport2::readPicture(
-    system.file("img", "correlaid-icon-cairo.svg", package = "correltools")
-  )
-
-  logo_width <- grid::unit(base_size * 2.1, "pt")
-
-  logo_grob <- grImport2::symbolsGrob(
-    logo,
-    x = grid::unit(1, "npc") - logo_width / 3,
-    y = grid::unit(0, "npc") + logo_width / 3,
-    size = logo_width
-  )
-
-  plot_margin <- grid::unit(base_size * 1.4, "pt")
-
-  patchwork::inset_element(
-    logo_grob,
-    left = grid::unit(1, "npc") - plot_margin - logo_width,
-    bottom = grid::unit(0, "npc") + plot_margin,
-    right = grid::unit(1, "npc") - plot_margin,
-    top = grid::unit(0, "npc") + plot_margin + logo_width,
-    align_to = "full", clip = FALSE, on_top = FALSE
-  )
 }

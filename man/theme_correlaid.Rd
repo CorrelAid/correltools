@@ -6,6 +6,7 @@
 \usage{
 theme_correlaid(
   base_size = 14,
+  base_family = "Roboto",
   base_line_size = base_size/28,
   base_rect_size = base_size/28,
   grid = "XY"
@@ -13,6 +14,8 @@ theme_correlaid(
 }
 \arguments{
 \item{base_size}{base font size, given in pts.}
+
+\item{base_family}{base font family}
 
 \item{base_line_size}{base size for line elements}
 
