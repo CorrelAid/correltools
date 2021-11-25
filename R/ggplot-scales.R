@@ -94,8 +94,9 @@ scale_colour_correlaid_d <- function(direction = 1,
                                      option = "qualitative",
                                      ...) {
   ggplot2::discrete_scale(
-    "colour", "correlaid",
-    correlaid_pal(direction, option),
+    aesthetics = "colour",
+    scale_name = "correlaid",
+    palette = correlaid_pal(direction, option),
     ...
   )
 }
@@ -110,8 +111,9 @@ scale_fill_correlaid_d <- function(direction = 1,
                                    option = "qualitative",
                                    ...) {
   ggplot2::discrete_scale(
-    "fill", "correlaid",
-    correlaid_pal(direction, option),
+    aesthetics = "fill",
+    scale_name = "correlaid",
+    palette = correlaid_pal(direction, option),
     ...
   )
 }
@@ -125,9 +127,11 @@ scale_colour_correlaid_c <- function(direction = 1,
                                      guide = "colourbar",
                                      ...) {
   ggplot2::continuous_scale(
-    "colour", "correlaid",
-    scales::gradient_n_pal(correlaid_pal(direction, option)(8)),
-    guide = guide, ...
+    aesthetics = "colour",
+    scale_name = "correlaid",
+    palette = scales::gradient_n_pal(correlaid_pal(direction, option)(8)),
+    guide = guide,
+    ...
   )
 }
 
@@ -142,9 +146,11 @@ scale_fill_correlaid_c <- function(direction = 1,
                                    guide = "colourbar",
                                    ...) {
   ggplot2::continuous_scale(
-    "fill", "correlaid",
-    scales::gradient_n_pal(correlaid_pal(direction, option)(8)),
-    guide = guide, ...
+    aesthetics = "fill",
+    scale_name = "correlaid",
+    palette = scales::gradient_n_pal(correlaid_pal(direction, option)(8)),
+    guide = guide,
+    ...
   )
 }
 
@@ -157,9 +163,11 @@ scale_colour_correlaid_b <- function(direction = 1,
                                      guide = "coloursteps",
                                      ...) {
   ggplot2::binned_scale(
-    "colour", "correlaid",
-    scales::gradient_n_pal(correlaid_pal(direction, option)(8)),
-    guide = guide, ...
+    aesthetics = "colour",
+    scale_name = "correlaid",
+    palette = scales::gradient_n_pal(correlaid_pal(direction, option)(8)),
+    guide = guide,
+    ...
   )
 }
 
@@ -174,8 +182,10 @@ scale_fill_correlaid_b <- function(direction = 1,
                                    guide = "coloursteps",
                                    ...) {
   ggplot2::binned_scale(
-    "fill", "correlaid",
-    scales::gradient_n_pal(correlaid_pal(direction, option)(8)),
-    guide = guide, ...
+    aesthetics = "fill",
+    scale_name = "correlaid",
+    palette = scales::gradient_n_pal(correlaid_pal(direction, option)(8)),
+    guide = guide,
+    ...
   )
 }
