@@ -1,0 +1,81 @@
+---
+title: "A simple CorrelAid Report"
+author: "Author"
+date: "11/25/2021"
+output: 
+  html_document:
+    theme: yeti
+    toc: true
+    toc_float: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_chunk$set(warning = FALSE)
+
+library(correltools)
+library(ggplot2)
+library(magrittr)
+library(palmerpenguins)
+theme_set(theme_correlaid())
+
+penguins <- palmerpenguins::penguins
+
+```
+
+
+```{css, echo=FALSE}
+ @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    background-color: "3863a2"
+}
+
+#TOC::before {
+  content: "";
+  display: block;
+  height: 100px;
+  margin: 20px 20px 40px 20px;
+  background-image: url("https://correlaid.org/images/correlaid/correlaid-brand2.png");
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+
+.list-group-item.active, .list-group-item.active:hover, .list-group-item.active:focus {
+  background-color: #3863a2;
+}
+
+/* links */
+a { 
+  color: #3863a2;
+}
+
+a:hover {
+ color: #2d3b5a; /* darker color when hovering */
+}
+```
+
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+
+```{r penguins}
+head(penguins) %>% knitr::kable()
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r plot}
+ggplot(penguins, aes(x = bill_length_mm, y = bill_depth_mm, color = species)) + 
+  geom_point()+
+  scale_color_correlaid_d()
+```
