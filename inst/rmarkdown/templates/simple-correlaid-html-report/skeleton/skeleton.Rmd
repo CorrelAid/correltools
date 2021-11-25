@@ -15,11 +15,7 @@ knitr::opts_chunk$set(warning = FALSE)
 
 library(correltools)
 library(ggplot2)
-library(magrittr)
-library(palmerpenguins)
 theme_set(theme_correlaid())
-
-penguins <- palmerpenguins::penguins
 
 ```
 
@@ -67,7 +63,7 @@ When you click the **Knit** button a document will be generated that includes bo
 
 
 ```{r penguins}
-head(penguins) %>% knitr::kable()
+knitr::kable(head(mtcars))
 ```
 
 ## Including Plots
@@ -75,7 +71,7 @@ head(penguins) %>% knitr::kable()
 You can also embed plots, for example:
 
 ```{r plot}
-ggplot(penguins, aes(x = bill_length_mm, y = bill_depth_mm, color = species)) + 
+ggplot(mtcars, aes(x = hp, y = mpg, color = factor(cyl))) + 
   geom_point()+
   scale_color_correlaid_d()
 ```
