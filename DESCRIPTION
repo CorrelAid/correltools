@@ -17,6 +17,7 @@ Depends:
 Imports: 
     systemfonts,
     ggplot2,
+    leaflet,
     patchwork,
     scales,
     grImport2,
@@ -30,5 +31,4 @@ Suggests:
     glue,
     sf,
     rnaturalearth,
-    leaflet,
     tmaptools
