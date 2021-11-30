@@ -1,0 +1,15 @@
+#TOC::before {
+  content: "";
+  display: block;
+  height: 100px;
+  margin: 20px 20px 40px 20px;
+  background-image: url("correlaid-brand2.png");
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+
+.list-group-item.active, .list-group-item.active:hover, .list-group-item.active:focus {
+  background-color: #3863a2;
+}
