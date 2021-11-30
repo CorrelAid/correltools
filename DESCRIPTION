@@ -12,9 +12,9 @@ Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.2
-Depends: 
+Depends:
     R (>= 2.10)
-Imports: 
+Imports:
     systemfonts,
     ggplot2,
     leaflet,
@@ -26,7 +26,7 @@ Imports:
     dplyr,
     tibble,
     rlang
-Suggests: 
+Suggests:
     showtext,
     glue,
     sf,

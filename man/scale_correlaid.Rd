@@ -111,7 +111,7 @@ library(ggplot2)
 
 ggplot(example_projects_labels, aes(category, fill = category)) +
   geom_bar(show.legend = FALSE) +
-  scale_fill_correlaid_d(option = "gradient") +
+  scale_fill_correlaid_d(option = "gradient")
 
 ggplot(mtcars, aes(wt, mpg, colour = mpg)) +
   geom_point(size = 5) +
