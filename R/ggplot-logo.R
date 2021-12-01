@@ -56,7 +56,7 @@ add_correlaid_logo_ <- function(p) {
     logo,
     x = unit(1, "npc") - unit(logo_width / 3, "pt"),
     y = unit(0, "npc") + unit(logo_width / 3, "pt"),
-    size = logo_width
+    size = unit(logo_width, "pt")
   )
 
   plot_margin <- unit(base_size * 1.4, "pt")
