@@ -1,0 +1,132 @@
+http_interactions:
+- request:
+    method: post
+    uri: https://correlcloud.org/ocs/v1.php/cloud/users?format=json
+    body:
+      encoding: ''
+      string: userid=FooB,email=first@example.com
+    headers:
+      Accept: application/json, text/xml, application/xml, */*
+      User-Agent: ocs4R-0.2.2
+      Authorization: fake token
+      Set-Cookie: ''
+      OCS-APIRequest: 'true'
+  response:
+    status:
+      status_code: 200
+      category: Success
+      reason: OK
+      message: 'Success: (200) OK'
+    headers:
+      date: Wed, 15 Dec 2021 15:23:01 GMT
+      server: Apache
+      referrer-policy: no-referrer
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-permitted-cross-domain-policies: none
+      x-robots-tag: none
+      x-xss-protection: 1; mode=block
+      expires: Thu, 19 Nov 1981 08:52:00 GMT
+      cache-control: no-cache, no-store, must-revalidate
+      pragma: no-cache
+      content-security-policy: default-src 'none';base-uri 'none';manifest-src 'self'
+      feature-policy: autoplay 'none';camera 'none';fullscreen 'none';geolocation
+        'none';microphone 'none';payment 'none'
+      content-length: '119'
+      strict-transport-security: max-age=31536000; includeSubDomains
+      content-type: application/json; charset=utf-8
+    body:
+      encoding: UTF-8
+      file: no
+      string: '{"ocs":{"meta":{"status":"ok","statuscode":100,"message":"OK","totalitems":"","itemsperpage":""},"data":{"id":"FooB"}}}'
+  recorded_at: 2021-12-15 15:23:04 GMT
+  recorded_with: vcr/1.0.2, webmockr/0.8.0
+- request:
+    method: put
+    uri: https://correlcloud.org/ocs/v1.php/cloud/users/FooB?format=json&key=display&value=First%20Last
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept: application/json, text/xml, application/xml, */*
+      User-Agent: ocs4R-0.2.2
+      Authorization: fake token
+      Set-Cookie: ''
+      OCS-APIRequest: 'true'
+      Content-Type: application/x-www-form-urlencoded
+  response:
+    status:
+      status_code: 200
+      category: Success
+      reason: OK
+      message: 'Success: (200) OK'
+    headers:
+      date: Wed, 15 Dec 2021 15:23:02 GMT
+      server: Apache
+      referrer-policy: no-referrer
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-permitted-cross-domain-policies: none
+      x-robots-tag: none
+      x-xss-protection: 1; mode=block
+      expires: Thu, 19 Nov 1981 08:52:00 GMT
+      cache-control: no-cache, no-store, must-revalidate
+      pragma: no-cache
+      content-security-policy: default-src 'none';base-uri 'none';manifest-src 'self'
+      feature-policy: autoplay 'none';camera 'none';fullscreen 'none';geolocation
+        'none';microphone 'none';payment 'none'
+      content-length: '108'
+      strict-transport-security: max-age=31536000; includeSubDomains
+      content-type: application/json; charset=utf-8
+    body:
+      encoding: UTF-8
+      file: no
+      string: '{"ocs":{"meta":{"status":"ok","statuscode":100,"message":"OK","totalitems":"","itemsperpage":""},"data":[]}}'
+  recorded_at: 2021-12-15 15:23:04 GMT
+  recorded_with: vcr/1.0.2, webmockr/0.8.0
+- request:
+    method: get
+    uri: https://correlcloud.org/ocs/v1.php/cloud/users/FooB?format=json
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept: application/json, text/xml, application/xml, */*
+      User-Agent: ocs4R-0.2.2
+      Authorization: fake token
+      Set-Cookie: ''
+      OCS-APIRequest: 'true'
+  response:
+    status:
+      status_code: 200
+      category: Success
+      reason: OK
+      message: 'Success: (200) OK'
+    headers:
+      date: Wed, 15 Dec 2021 15:23:04 GMT
+      server: Apache
+      referrer-policy: no-referrer
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-permitted-cross-domain-policies: none
+      x-robots-tag: none
+      x-xss-protection: 1; mode=block
+      expires: Thu, 19 Nov 1981 08:52:00 GMT
+      cache-control: no-cache, no-store, must-revalidate
+      pragma: no-cache
+      content-security-policy: default-src 'none';base-uri 'none';manifest-src 'self'
+      feature-policy: autoplay 'none';camera 'none';fullscreen 'none';geolocation
+        'none';microphone 'none';payment 'none'
+      content-length: '491'
+      strict-transport-security: max-age=31536000; includeSubDomains
+      content-type: application/json; charset=utf-8
+    body:
+      encoding: UTF-8
+      file: no
+      string: '{"ocs":{"meta":{"status":"ok","statuscode":100,"message":"OK","totalitems":"","itemsperpage":""},"data":{"enabled":true,"storageLocation":"\/home\/sites\/site100006666\/web\/data\/FooB","id":"FooB","lastLogin":0,"backend":"Database","subadmin":[],"quota":{"quota":"none","used":0},"email":"first@example.com","displayname":"First
+        Last","phone":"","address":"","website":"","twitter":"","groups":[],"language":"","locale":"","backendCapabilities":{"setDisplayName":true,"setPassword":true}}}}'
+  recorded_at: 2021-12-15 15:23:04 GMT
+  recorded_with: vcr/1.0.2, webmockr/0.8.0

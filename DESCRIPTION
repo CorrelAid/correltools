@@ -13,7 +13,8 @@ LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.2
 Depends:
-    R (>= 2.10)
+    R (>= 2.10),
+    ocs4R
 Imports:
     systemfonts,
     ggplot2,
@@ -22,6 +23,7 @@ Imports:
     scales,
     grImport2,
     rvest,
+    stringr,
     xml2,
     dplyr,
     tibble,
@@ -31,4 +33,7 @@ Suggests:
     glue,
     sf,
     rnaturalearth,
-    tmaptools
+    tmaptools,
+    testthat (>= 3.0.0),
+    vcr (>= 0.6.0)
+Config/testthat/edition: 3
