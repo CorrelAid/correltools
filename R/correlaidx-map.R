@@ -19,7 +19,7 @@ correlaidx_map <- function(chapters_df, lang = 'en') {
   #define color palette
   correlaidx_pal <- correltools::correlaid_pal(option = 'gradient_x')
   year_founded <- factor(chapters_df$year_founded)
-  pal_cities <- leaflet::colorFactor(correlaidx_pal(length(year_founded)), domain = year_founded)
+  pal_cities <- colorFactor(correlaidx_pal(length(year_founded)), domain = year_founded)
 
   cax_map <-
 

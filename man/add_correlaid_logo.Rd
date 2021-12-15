@@ -35,6 +35,6 @@ ggplot(example_projects_labels, aes(category)) +
 ggplot(mtcars, aes(wt, mpg)) +
   geom_point(size = 3) +
   theme_correlaid(base_size = 20) +
-  add_correlaid_logo() &
+  add_correlaid_logo() +
   scale_colour_correlaid_c()
 }
