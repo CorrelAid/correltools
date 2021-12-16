@@ -17,6 +17,27 @@ remotes::install_github("correlaid/correltools")
 ```
 
 # Features 
+## RMarkdown HTML Theme and Template
+`correltools` makes available a CorrelAid branded HTML document theme for RMarkdown, derived from `html_document`. 
+
+To use it, add `corretools::html_yeti` as your output format.
+
+
+```
+---
+title: "A CorrelAid themed report"
+output: 
+  correltools::html_yeti:
+    toc: true
+    toc_float: true
+---
+```
+
+Alternatively, you can directly create a CorrelAid document by creating it from the template:
+
+1. File -> New File -> RMarkdown 
+2. in the popup, select "From Template" and then select the "Simple CorrelAid HTML Report"
+
 ## CorrelAidX map
 ```{r cax-map}
 library(correltools)
