@@ -19,6 +19,7 @@ logo would therefore have no effect. See example below and the
 \link[=patchwork-package]{patchwork documentation} for more details.
 }
 \examples{
+\dontrun{
 library(ggplot2)
 
 ggplot(mtcars, aes(wt, mpg)) + geom_point() + add_correlaid_logo()
@@ -37,4 +38,5 @@ ggplot(mtcars, aes(wt, mpg)) +
   theme_correlaid(base_size = 20) +
   add_correlaid_logo() +
   scale_colour_correlaid_c()
+}
 }

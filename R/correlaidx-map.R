@@ -55,7 +55,7 @@ correlaidx_map <- function(chapters_df, lang = 'en') {
       "bottomright",
       pal = pal_cities,
       values = ~factor(year_founded),
-      title = ifelse(lang == 'en', "Year founded", "Gründungsjahr"),
+      title = ifelse(lang == 'en', "Year founded", "Gruendungsjahr"),
       opacity = 1
     ) %>%
 

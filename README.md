@@ -22,6 +22,8 @@ chapters <- get_correlaidx_data()
 
     ## geocoding - this can take a couple of seconds
 
+    ## No results found for "You want to know more about CorrelAid? Sign up for our Newsletter!".
+
     ## although coordinates are longitude/latitude, st_intersects assumes that they are planar
     ## although coordinates are longitude/latitude, st_intersects assumes that they are planar
 
@@ -30,6 +32,9 @@ correlaidx_map(chapters)
 ```
 
     ## Assuming "lon" and "lat" are longitude and latitude, respectively
+
+    ## Warning in validateCoords(lng, lat, funcName): Data contains 1 rows with either
+    ## missing or invalid lat/lon values and will be ignored
 
 ![](README_files/figure-gfm/cax-map-1.png)<!-- -->
 
@@ -41,6 +46,8 @@ chapters_de <- get_correlaidx_data(lang = 'de')
 
     ## geocoding - this can take a couple of seconds
 
+    ## No results found for "Du willst mehr über CorrelAid erfahren? Dann abonniere unseren Newsletter!".
+
     ## although coordinates are longitude/latitude, st_intersects assumes that they are planar
     ## although coordinates are longitude/latitude, st_intersects assumes that they are planar
 
@@ -49,6 +56,9 @@ correlaidx_map(chapters_de, lang = 'de')
 ```
 
     ## Assuming "lon" and "lat" are longitude and latitude, respectively
+
+    ## Warning in validateCoords(lng, lat, funcName): Data contains 1 rows with either
+    ## missing or invalid lat/lon values and will be ignored
 
 ![](README_files/figure-gfm/cax-map-de-1.png)<!-- -->
 
@@ -172,6 +182,65 @@ scales::show_col(pal_ca(9))
 ```
 
 ![](README_files/figure-gfm/palettes-3.png)<!-- -->
+
+## CorrelCloud
+
+`correltools` provides functions to make administrative tasks involving
+the CorrelCloud - our Nextcloud instance - easier.
+
+In order to do so, you will need to make your username and password
+available as `CORRELCLOUD_USR` respectively `CORRELCLOUD_PWD`
+environment variables (e.g. use `usethis::edit_r_environ()` to edit your
+environment variables).
+
+First, create a connection:
+
+``` r
+con <- new_correlcloud_con()
+```
+
+Notably, you can:
+
+**create a new user (admin-only)**:
+
+``` r
+new_correlcloud_user(con, "Leo", "Muster", "leo@muster.de")
+```
+
+The default username will be {first name}{first letter of last name},
+e.g. “LeoM”. If you want to override this behaviour, you can specify the
+`user_id` argument:
+
+``` r
+new_correlcloud_user(con, "Leo", "Muster", "leo@muster.de", user_id = "LeoMu")
+```
+
+By default, users will not be added to any user groups, so they won’t
+have access to any data/files. If you want to give them access, you can
+specify a character vector to the `groups` argument.
+
+``` r
+new_correlcloud_user(con, "Leo", "Muster", "leo@muster.de", groups = c("User", "2021-01-TES"), user_id = "LeoMu")
+```
+
+**create a new group**:
+
+``` r
+new_correlcloud_group(con, "2022-01-TES")
+```
+
+**add a user to a group**:
+
+``` r
+add_correlcloud_user_to_group(con, "LeoM", "2022-01-TES")
+```
+
+Finally, you can **list users and groups** (admin rights required):
+
+``` r
+get_correlcloud_groups(con)
+get_correlcloud_users(con)
+```
 
 ## Contribute
 

@@ -5,3 +5,6 @@
 
 # htmls of skeletons
 *skeleton.html
+
+.DS_Store
+README.html

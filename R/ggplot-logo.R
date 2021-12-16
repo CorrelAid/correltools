@@ -14,6 +14,7 @@
 #' @export
 #'
 #' @examples
+#' \dontrun{
 #' library(ggplot2)
 #'
 #' ggplot(mtcars, aes(wt, mpg)) + geom_point() + add_correlaid_logo()
@@ -32,6 +33,7 @@
 #'   theme_correlaid(base_size = 20) +
 #'   add_correlaid_logo() +
 #'   scale_colour_correlaid_c()
+#' }
 add_correlaid_logo <- function() {
   structure(
     list(),
@@ -80,7 +82,7 @@ ggplot_add.logo_patch <- function(object, p, objectname) {
 }
 
 #' @export
-print.logo_patch <- function(x) {
+print.logo_patch <- function(x, ...) {
   print(ggplot2::ggplot() + ggplot2::theme_void() + x)
   invisible(x)
 }
