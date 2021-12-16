@@ -1,0 +1,45 @@
+http_interactions:
+- request:
+    method: post
+    uri: https://correlcloud.org/ocs/v1.php/cloud/groups?format=json
+    body:
+      encoding: ''
+      string: groupid=testgroup
+    headers:
+      Accept: application/json, text/xml, application/xml, */*
+      User-Agent: ocs4R-0.2.2
+      Authorization: fake token
+      Set-Cookie: ''
+      OCS-APIRequest: 'true'
+  response:
+    status:
+      status_code: 200
+      category: Success
+      reason: OK
+      message: 'Success: (200) OK'
+    headers:
+      cache-control: no-cache, no-store, must-revalidate
+      content-length: '108'
+      content-security-policy: default-src 'none';base-uri 'none';manifest-src 'self'
+      content-type: application/json; charset=utf-8
+      date: Thu, 16 Dec 2021 10:33:49 GMT
+      expires: Thu, 19 Nov 1981 08:52:00 GMT
+      feature-policy: autoplay 'none';camera 'none';fullscreen 'none';geolocation
+        'none';microphone 'none';payment 'none'
+      pragma: no-cache
+      referrer-policy: no-referrer
+      server: Apache
+      set-cookie: filtered cookies
+      strict-transport-security: max-age=31536000; includeSubDomains
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-permitted-cross-domain-policies: none
+      x-robots-tag: none
+      x-xss-protection: 1; mode=block
+    body:
+      encoding: UTF-8
+      file: no
+      string: '{"ocs":{"meta":{"status":"ok","statuscode":100,"message":"OK","totalitems":"","itemsperpage":""},"data":[]}}'
+  recorded_at: 2021-12-16 10:33:50 GMT
+  recorded_with: vcr/1.0.2, webmockr/0.8.0

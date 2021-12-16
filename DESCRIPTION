@@ -27,7 +27,7 @@ Imports:
     xml2,
     dplyr,
     tibble,
-    rlang
+    rlang,
 Suggests:
     showtext,
     glue,
@@ -35,5 +35,7 @@ Suggests:
     rnaturalearth,
     tmaptools,
     testthat (>= 3.0.0),
-    vcr (>= 0.6.0)
+    vcr (>= 0.6.0),
+    webmockr,
+    rmarkdown
 Config/testthat/edition: 3

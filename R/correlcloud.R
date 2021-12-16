@@ -37,3 +37,46 @@ new_correlcloud_user <- function(con, first_name, last_name, email, groups = c("
   message("invited user {username}")
   invisible(con$getUser(username))
 }
+
+
+#' creates new group in CorrelCloud
+#' @param con ocs4R::ocsManager. connection to CorrelCloud as created by new_correlcloud_con
+#' @param group_id character. name of the group ("id")
+#' @export
+new_correlcloud_group <- function(con, group_id) {
+  con$addGroup(group_id)
+}
+
+#' list all groups in CorrelCloud
+#' @param con ocs4R::ocsManager. connection to CorrelCloud as created by new_correlcloud_con
+#' @return character. character vector with all group ids in the CorrelCloud.
+#' @export
+get_correlcloud_groups <- function(con) {
+  con$getGroups()
+}
+
+#' list all users in CorrelCloud
+#' @param con ocs4R::ocsManager. connection to CorrelCloud as created by new_correlcloud_con
+#' @return character. character vector with all user ids in the CorrelCloud.
+#' @export
+get_correlcloud_users <- function(con) {
+  con$getUsers()
+}
+
+
+#' adds user to group
+#' @param con ocs4R::ocsManager. connection to CorrelCloud as created by new_correlcloud_con
+#' @param user_id character. user id of the user
+#' @param group_id character. id of the group the user should be added to.
+#' @return boolean. True if successful.
+#' @export
+add_correlcloud_user_to_group <- function(con, user_id, group_id) {
+  if (!user_id %in% get_correlcloud_users(con)) {
+    stop(paste("User", user_id, "does not exist. Create it first with new_correlcloud_user."))
+  }
+  if (!group_id %in% get_correlcloud_groups(con)) {
+    stop(paste("Group", group_id, "does not exist. Create it first with new_correlcloud_group."))
+  }
+  con$addToGroup(user_id, group_id)
+}
+
