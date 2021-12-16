@@ -9,8 +9,8 @@ new_correlcloud_user(
   first_name,
   last_name,
   email,
-  groups = c("User"),
-  username = NA
+  groups = NA,
+  user_id = NA
 )
 }
 \arguments{
@@ -22,9 +22,9 @@ new_correlcloud_user(
 
 \item{email}{character. email address to send invitation to.}
 
-\item{groups}{character. character vector of groups to add user to. defaults to c("User").}
+\item{groups}{character. character vector of groups to add user to. defaults to NA.}
 
-\item{username}{character. username/login. defaults to NA, i.e. creating user name from first_name and last_name.}
+\item{user_id}{character. user_id/login. defaults to NA, i.e. creating user name from first_name and last_name.}
 }
 \value{
 the created user as per getUser method of ocs4R::ocsManager

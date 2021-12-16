@@ -12,7 +12,7 @@ test_that("creating a user works", {
 test_that("overwriting the username works", {
   con <- new_correlcloud_con()
   vcr::use_cassette("correlcloud-create-user-overwrite-username", {
-    user <- new_correlcloud_user(con, "First", "Last", "first@example.com", username = "FooB")
+    user <- new_correlcloud_user(con, "First", "Last", "first@example.com", user_id = "FooB")
   })
   expect_equal(user$email, "first@example.com")
   expect_equal(user$displayname, "First Last")

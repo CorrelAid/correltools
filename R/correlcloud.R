@@ -1,10 +1,10 @@
 #' creates new connection to CorrelCloud
-#' @param usr character. user to use to connect to CorrelCloud. defaults to Sys.getenv("NEXTCLOUD_USR")
-#' @param pwd character. password to use to connect to CorrelCloud. defaults to Sys.getenv("NEXTCLOUD_PWD")
+#' @param usr character. user to use to connect to CorrelCloud. defaults to Sys.getenv("CORRELCLOUD_USR")
+#' @param pwd character. password to use to connect to CorrelCloud. defaults to Sys.getenv("CORRELCLOUD_PWD")
 #' @return ocs4R::ocsManager object that can be used to interact with the CorrelCloud
 #' @export
-new_correlcloud_con <- function(usr = Sys.getenv("NEXTCLOUD_USR"),
-                                pwd = Sys.getenv("NEXTCLOUD_PWD")) {
+new_correlcloud_con <- function(usr = Sys.getenv("CORRELCLOUD_USR"),
+                                pwd = Sys.getenv("CORRELCLOUD_PWD")) {
 
   ocs4R::ocsManager$new(
     url = "https://correlcloud.org", user = usr, pwd = pwd)
@@ -15,27 +15,27 @@ new_correlcloud_con <- function(usr = Sys.getenv("NEXTCLOUD_USR"),
 #' @param first_name character. first name of user.
 #' @param last_name character. last name of user
 #' @param email character. email address to send invitation to.
-#' @param groups character. character vector of groups to add user to. defaults to c("User").
-#' @param username character. username/login. defaults to NA, i.e. creating user name from first_name and last_name.
+#' @param groups character. character vector of groups to add user to. defaults to NA.
+#' @param user_id character. user_id/login. defaults to NA, i.e. creating user name from first_name and last_name.
 #' @return the created user as per getUser method of ocs4R::ocsManager
 #' @export
-new_correlcloud_user <- function(con, first_name, last_name, email, groups = c("User"), username = NA) {
+new_correlcloud_user <- function(con, first_name, last_name, email, groups = NA, user_id = NA) {
   # username if not specified
-  if (is.na(username)) {
+  if (is.na(user_id)) {
     # make sure trimmed
     first_name <- stringr::str_trim(first_name)
     last_name <- stringr::str_trim(last_name)
 
     # FirstL
-    username <- paste0(stringr::str_to_title(first_name),
+    user_id <- paste0(stringr::str_to_title(first_name),
                        stringr::str_to_upper(stringr::str_sub(last_name, 1, 1)))
   }
 
-  message("inviting user {username}")
-  con$addUser(username, email = email)
-  con$editUserDisplayName(username, paste(first_name, last_name))
-  message("invited user {username}")
-  invisible(con$getUser(username))
+  message("inviting user {user_id}")
+  con$addUser(user_id, email = email)
+  con$editUserDisplayName(user_id, paste(first_name, last_name))
+  message("invited user {user_id}")
+  invisible(con$getUser(user_id))
 }
 
 
@@ -79,4 +79,3 @@ add_correlcloud_user_to_group <- function(con, user_id, group_id) {
   }
   con$addToGroup(user_id, group_id)
 }
-

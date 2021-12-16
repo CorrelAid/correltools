@@ -5,14 +5,14 @@
 \title{creates new connection to CorrelCloud}
 \usage{
 new_correlcloud_con(
-  usr = Sys.getenv("NEXTCLOUD_USR"),
-  pwd = Sys.getenv("NEXTCLOUD_PWD")
+  usr = Sys.getenv("CORRELCLOUD_USR"),
+  pwd = Sys.getenv("CORRELCLOUD_PWD")
 )
 }
 \arguments{
-\item{usr}{character. user to use to connect to CorrelCloud. defaults to Sys.getenv("NEXTCLOUD_USR")}
+\item{usr}{character. user to use to connect to CorrelCloud. defaults to Sys.getenv("CORRELCLOUD_USR")}
 
-\item{pwd}{character. password to use to connect to CorrelCloud. defaults to Sys.getenv("NEXTCLOUD_PWD")}
+\item{pwd}{character. password to use to connect to CorrelCloud. defaults to Sys.getenv("CORRELCLOUD_PWD")}
 }
 \value{
 ocs4R::ocsManager object that can be used to interact with the CorrelCloud
