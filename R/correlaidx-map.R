@@ -135,5 +135,6 @@ get_correlaidx_data <- function(lang = 'en') {
 
   # drop unnecessary variables
   chapters_df %>%
-    dplyr::select(-.data$intersection, -dplyr::ends_with('max'), -dplyr::ends_with('min'))
+    dplyr::select(-.data$intersection, -dplyr::ends_with('max'), -dplyr::ends_with('min')) %>%
+    dplyr::filter(!is.na(lat) & !is.na(lon))
 }
