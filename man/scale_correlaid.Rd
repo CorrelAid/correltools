@@ -97,13 +97,15 @@ Function naming scheme:
 \item \verb{_b}: binned scale.
 }
 
-Change the following \code{\link[=options]{options()}} to set these scales as the default ggplot2 scales:\preformatted{options(
+Change the following \code{\link[=options]{options()}} to set these scales as the default ggplot2 scales:
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{options(
   ggplot2.discrete.colour = correltools::scale_colour_correlaid_d,
   ggplot2.discrete.fill = correltools::scale_fill_correlaid_d,
   ggplot2.continuous.colour = correltools::scale_colour_correlaid_c,
   ggplot2.continuous.fill = correltools::scale_fill_correlaid_c
 )
-}
+}\if{html}{\out{</div>}}
 }
 \examples{
 
