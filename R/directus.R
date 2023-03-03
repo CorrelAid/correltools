@@ -21,6 +21,7 @@ directus_get_ <- function(endpoint, parse = TRUE, token = Sys.getenv("DIRECTUS_T
 #' @param token character. API token for Directus, defaults to environment variable DIRECTUS_TOKEN.
 #' @param limit integer. how many objects to return. defaults to -1 meaning all objects.
 #' @return list. parsed content of httr return object
+#' @export
 directus_get <- function(endpoint, token = Sys.getenv("DIRECTUS_TOKEN"), limit = -1) {
   directus_get_(endpoint, token = token)
 }
@@ -31,6 +32,7 @@ directus_get <- function(endpoint, token = Sys.getenv("DIRECTUS_TOKEN"), limit =
 #' @param body list. body to post to Directus. Can be a list of lists (for multiple elements at once) or a single list (for only one element).
 #' @param token character. API token for Directus, defaults to environment variable DIRECTUS_TOKEN.
 #' @return httr return object
+#' @export
 directus_post <- function(endpoint, body, token = Sys.getenv("DIRECTUS_TOKEN")) {
   body_json <- jsonlite::toJSON(body, auto_unbox = TRUE)
   res <- httr::POST(paste0("https://correlaid.directus.app/", endpoint),
@@ -48,6 +50,7 @@ directus_post <- function(endpoint, body, token = Sys.getenv("DIRECTUS_TOKEN")) 
 #' @param body list. updates to patch. do not include the id of the element.
 #' @param token character. API token for Directus, defaults to environment variable DIRECTUS_TOKEN.
 #' @return httr return object
+#' @export
 directus_patch <- function(endpoint, id, body, token = Sys.getenv("DIRECTUS_TOKEN")) {
   body_json <- jsonlite::toJSON(body, auto_unbox = TRUE)
   res <- httr::PATCH(paste0("https://correlaid.directus.app/", endpoint, "/", id),
