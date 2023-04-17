@@ -4,25 +4,19 @@
 \alias{directus_get}
 \title{get data from directus}
 \usage{
-directus_get(
-  endpoint,
-  token = Sys.getenv("DIRECTUS_TOKEN"),
-  api_base = "https://cms.correlaid.org/",
-  limit = -1
-)
+directus_get(endpoint, query)
 }
 \arguments{
 \item{endpoint}{character. REST endpoint to get. Refer to \href{https://docs.directus.io/reference/introduction.html}{the API reference}.}
 
-\item{token}{character. API token for Directus, defaults to environment variable DIRECTUS_TOKEN.}
-
-\item{api_base}{character. API base URL. defaults to https://cms.correlaid.org.}
-
-\item{limit}{integer. how many objects to return. defaults to -1 meaning all objects.}
+\item{query}{list. list of optional global query parameters.}
 }
 \value{
 list. parsed content of httr return object
 }
 \description{
 get data from directus
+}
+\details{
+utility function that calls directus_get_ with the default arguments. If you need more control over arguments, use directus_get_.
 }

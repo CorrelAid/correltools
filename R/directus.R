@@ -4,11 +4,13 @@
 #' @param token character. API token for Directus, defaults to environment variable DIRECTUS_TOKEN.
 #' @param api_base character. API base URL. defaults to https://cms.correlaid.org.
 #' @param limit integer. how many objects to return. defaults to -1 meaning all objects.
+#' @param query list. list of optional global query parameters.
 #' @return httr return object if `parse = FALSE`. parsed content of httr result if `parse = TRUE`.
 #' @export
-directus_get_ <- function(endpoint, parse = TRUE, token = Sys.getenv("DIRECTUS_TOKEN"), api_base = "https://cms.correlaid.org/", limit = -1) {
+directus_get_ <- function(endpoint, parse = TRUE, token = Sys.getenv("DIRECTUS_TOKEN"), api_base = "https://cms.correlaid.org/", limit = -1, query = list()) {
+  query_list = c(limit, query)
   res <- httr::GET(paste0(api_base, endpoint),
-                   query = list(limit = limit),
+                   query = query_list,
                    httr::add_headers(
                      authorization = paste0("Bearer ", token)))
   httr::stop_for_status(res)
@@ -19,13 +21,12 @@ directus_get_ <- function(endpoint, parse = TRUE, token = Sys.getenv("DIRECTUS_T
 
 #' get data from directus
 #' @param endpoint character. REST endpoint to get. Refer to [the API reference](https://docs.directus.io/reference/introduction.html).
-#' @param token character. API token for Directus, defaults to environment variable DIRECTUS_TOKEN.
-#' @param limit integer. how many objects to return. defaults to -1 meaning all objects.
-#' @param api_base character. API base URL. defaults to https://cms.correlaid.org.
+#' @param query list. list of optional global query parameters.
 #' @return list. parsed content of httr return object
 #' @export
-directus_get <- function(endpoint, token = Sys.getenv("DIRECTUS_TOKEN"), api_base = "https://cms.correlaid.org/", limit = -1) {
-  directus_get_(endpoint, token = token)
+#' @details utility function that calls directus_get_ with the default arguments. If you need more control over arguments, use directus_get_.
+directus_get <- function(endpoint, query) {
+  directus_get_(endpoint, query = query)
 }
 
 

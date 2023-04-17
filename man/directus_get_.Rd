@@ -9,7 +9,8 @@ directus_get_(
   parse = TRUE,
   token = Sys.getenv("DIRECTUS_TOKEN"),
   api_base = "https://cms.correlaid.org/",
-  limit = -1
+  limit = -1,
+  query = list()
 )
 }
 \arguments{
@@ -22,6 +23,8 @@ directus_get_(
 \item{api_base}{character. API base URL. defaults to https://cms.correlaid.org.}
 
 \item{limit}{integer. how many objects to return. defaults to -1 meaning all objects.}
+
+\item{query}{list. list of optional global query parameters.}
 }
 \value{
 httr return object if \code{parse = FALSE}. parsed content of httr result if \code{parse = TRUE}.
