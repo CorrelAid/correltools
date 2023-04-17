@@ -2,11 +2,12 @@
 #' @param endpoint character. REST endpoint to get. Refer to [the API reference](https://docs.directus.io/reference/introduction.html).
 #' @param parse boolean. whether or not to parse the result. defaults to true.
 #' @param token character. API token for Directus, defaults to environment variable DIRECTUS_TOKEN.
+#' @param api_base character. API base URL. defaults to https://cms.correlaid.org.
 #' @param limit integer. how many objects to return. defaults to -1 meaning all objects.
 #' @return httr return object if `parse = FALSE`. parsed content of httr result if `parse = TRUE`.
 #' @export
-directus_get_ <- function(endpoint, parse = TRUE, token = Sys.getenv("DIRECTUS_TOKEN"), limit = -1) {
-  res <- httr::GET(paste0("https://correlaid.directus.app/", endpoint),
+directus_get_ <- function(endpoint, parse = TRUE, token = Sys.getenv("DIRECTUS_TOKEN"), api_base = "https://cms.correlaid.org/", limit = -1) {
+  res <- httr::GET(paste0(api_base, endpoint),
                    query = list(limit = limit),
                    httr::add_headers(
                      authorization = paste0("Bearer ", token)))
@@ -20,9 +21,10 @@ directus_get_ <- function(endpoint, parse = TRUE, token = Sys.getenv("DIRECTUS_T
 #' @param endpoint character. REST endpoint to get. Refer to [the API reference](https://docs.directus.io/reference/introduction.html).
 #' @param token character. API token for Directus, defaults to environment variable DIRECTUS_TOKEN.
 #' @param limit integer. how many objects to return. defaults to -1 meaning all objects.
+#' @param api_base character. API base URL. defaults to https://cms.correlaid.org.
 #' @return list. parsed content of httr return object
 #' @export
-directus_get <- function(endpoint, token = Sys.getenv("DIRECTUS_TOKEN"), limit = -1) {
+directus_get <- function(endpoint, token = Sys.getenv("DIRECTUS_TOKEN"), api_base = "https://cms.correlaid.org/", limit = -1) {
   directus_get_(endpoint, token = token)
 }
 
@@ -31,11 +33,12 @@ directus_get <- function(endpoint, token = Sys.getenv("DIRECTUS_TOKEN"), limit =
 #' @param endpoint character. REST endpoint to post to. Refer to [the API reference](https://docs.directus.io/reference/introduction.html).
 #' @param body list. body to post to Directus. Can be a list of lists (for multiple elements at once) or a single list (for only one element).
 #' @param token character. API token for Directus, defaults to environment variable DIRECTUS_TOKEN.
+#' @param api_base character. API base URL. defaults to https://cms.correlaid.org.
 #' @return httr return object
 #' @export
-directus_post <- function(endpoint, body, token = Sys.getenv("DIRECTUS_TOKEN")) {
+directus_post <- function(endpoint, body, token = Sys.getenv("DIRECTUS_TOKEN"), api_base = "https://cms.correlaid.org/") {
   body_json <- jsonlite::toJSON(body, auto_unbox = TRUE)
-  res <- httr::POST(paste0("https://correlaid.directus.app/", endpoint),
+  res <- httr::POST(paste0(api_base, endpoint),
                     body = body_json,
                     httr::add_headers(
                       authorization = paste0("Bearer ", token),
@@ -49,11 +52,12 @@ directus_post <- function(endpoint, body, token = Sys.getenv("DIRECTUS_TOKEN")) 
 #' @param id integer. id of the element to be patched.
 #' @param body list. updates to patch. do not include the id of the element.
 #' @param token character. API token for Directus, defaults to environment variable DIRECTUS_TOKEN.
+#' @param api_base character. API base URL. defaults to https://cms.correlaid.org.
 #' @return httr return object
 #' @export
-directus_patch <- function(endpoint, id, body, token = Sys.getenv("DIRECTUS_TOKEN")) {
+directus_patch <- function(endpoint, id, body, token = Sys.getenv("DIRECTUS_TOKEN"), api_base = "https://cms.correlaid.org/") {
   body_json <- jsonlite::toJSON(body, auto_unbox = TRUE)
-  res <- httr::PATCH(paste0("https://correlaid.directus.app/", endpoint, "/", id),
+  res <- httr::PATCH(paste0(api_base, endpoint, "/", id),
                      body = body_json,
                      httr::add_headers(
                        authorization = paste0("Bearer ", token),

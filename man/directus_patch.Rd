@@ -4,7 +4,13 @@
 \alias{directus_patch}
 \title{patch/edit data in directus}
 \usage{
-directus_patch(endpoint, id, body, token = Sys.getenv("DIRECTUS_TOKEN"))
+directus_patch(
+  endpoint,
+  id,
+  body,
+  token = Sys.getenv("DIRECTUS_TOKEN"),
+  api_base = "https://cms.correlaid.org/"
+)
 }
 \arguments{
 \item{endpoint}{character. REST endpoint to patch. Refer to \href{https://docs.directus.io/reference/introduction.html}{the API reference}.}
@@ -14,6 +20,8 @@ directus_patch(endpoint, id, body, token = Sys.getenv("DIRECTUS_TOKEN"))
 \item{body}{list. updates to patch. do not include the id of the element.}
 
 \item{token}{character. API token for Directus, defaults to environment variable DIRECTUS_TOKEN.}
+
+\item{api_base}{character. API base URL. defaults to https://cms.correlaid.org.}
 }
 \value{
 httr return object

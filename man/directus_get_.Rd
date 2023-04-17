@@ -8,6 +8,7 @@ directus_get_(
   endpoint,
   parse = TRUE,
   token = Sys.getenv("DIRECTUS_TOKEN"),
+  api_base = "https://cms.correlaid.org/",
   limit = -1
 )
 }
@@ -17,6 +18,8 @@ directus_get_(
 \item{parse}{boolean. whether or not to parse the result. defaults to true.}
 
 \item{token}{character. API token for Directus, defaults to environment variable DIRECTUS_TOKEN.}
+
+\item{api_base}{character. API base URL. defaults to https://cms.correlaid.org.}
 
 \item{limit}{integer. how many objects to return. defaults to -1 meaning all objects.}
 }

@@ -4,7 +4,12 @@
 \alias{directus_post}
 \title{post/create data in directus}
 \usage{
-directus_post(endpoint, body, token = Sys.getenv("DIRECTUS_TOKEN"))
+directus_post(
+  endpoint,
+  body,
+  token = Sys.getenv("DIRECTUS_TOKEN"),
+  api_base = "https://cms.correlaid.org/"
+)
 }
 \arguments{
 \item{endpoint}{character. REST endpoint to post to. Refer to \href{https://docs.directus.io/reference/introduction.html}{the API reference}.}
@@ -12,6 +17,8 @@ directus_post(endpoint, body, token = Sys.getenv("DIRECTUS_TOKEN"))
 \item{body}{list. body to post to Directus. Can be a list of lists (for multiple elements at once) or a single list (for only one element).}
 
 \item{token}{character. API token for Directus, defaults to environment variable DIRECTUS_TOKEN.}
+
+\item{api_base}{character. API base URL. defaults to https://cms.correlaid.org.}
 }
 \value{
 httr return object
