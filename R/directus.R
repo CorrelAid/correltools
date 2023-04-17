@@ -8,7 +8,7 @@
 #' @return httr return object if `parse = FALSE`. parsed content of httr result if `parse = TRUE`.
 #' @export
 directus_get_ <- function(endpoint, parse = TRUE, token = Sys.getenv("DIRECTUS_TOKEN"), api_base = "https://cms.correlaid.org/", limit = -1, query = list()) {
-  query_list = c(limit, query)
+  query_list = c(limit = limit, query)
   res <- httr::GET(paste0(api_base, endpoint),
                    query = query_list,
                    httr::add_headers(
